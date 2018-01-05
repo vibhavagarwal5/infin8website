@@ -11,6 +11,21 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :users_id %>
+    <%= form.text_field :users_id, id: :registration_users_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :events_id %>
+    <%= form.text_field :events_id, id: :registration_events_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_name %>
+    <%= form.text_field :team_name, id: :registration_team_name %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

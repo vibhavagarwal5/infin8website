@@ -17,7 +17,7 @@ class RegistrationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create registration" do
     assert_difference('Registration.count') do
-      post registrations_url, params: { registration: {  } }
+      post registrations_url, params: { registration: { events_id: @registration.events_id, team_name: @registration.team_name, users_id: @registration.users_id } }
     end
 
     assert_redirected_to registration_url(Registration.last)
@@ -34,7 +34,7 @@ class RegistrationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update registration" do
-    patch registration_url(@registration), params: { registration: {  } }
+    patch registration_url(@registration), params: { registration: { events_id: @registration.events_id, team_name: @registration.team_name, users_id: @registration.users_id } }
     assert_redirected_to registration_url(@registration)
   end
 
