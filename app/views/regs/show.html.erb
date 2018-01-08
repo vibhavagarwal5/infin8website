@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @reg.user %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @reg.event %>
+</p>
+
+<p>
+  <strong>Team name:</strong>
+  <%= @reg.team_name %>
+</p>
+
+<%= link_to 'Edit', edit_reg_path(@reg) %> |
+<%= link_to 'Back', regs_path %>
