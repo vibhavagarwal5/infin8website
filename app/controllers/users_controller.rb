@@ -4,12 +4,19 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @user = current_user
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find params[:id]
+    unless current_user == @user
+      flash[:notice] = "You don't have access!"
+      redirect_to root_path
+      return
+    end
+    redirect_to root_path
   end
 
   # GET /users/new
@@ -18,8 +25,14 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
-  def edit
-  end
+  # def edit
+  #   @user = User.find params[:id]
+  #   unless current_user == @user
+  #     flash[:notice] = "You don't have access!"
+  #     redirect_to root_path
+  #     return
+  #   end
+  # end
 
   # POST /users
   # POST /users.json

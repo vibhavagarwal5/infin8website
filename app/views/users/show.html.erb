@@ -1,4 +1,30 @@
 <p id="notice"><%= notice %></p>
 
+<ul class="hmenu">
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+  </li>
+</ul>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>College:</strong>
+  <%= @user.college %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @user.contact %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
 <%= link_to 'Edit', edit_user_registration_url(@user) %> |
 <%= link_to 'Back', users_path %>
