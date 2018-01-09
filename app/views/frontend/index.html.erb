@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+    	<!-- meta charec set -->
+        <meta charset="utf-8">
+		<!-- Always force latest IE rendering engine or request Chrome Frame -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!-- Page Title -->
+        <title>Infin&infintie;</title>
+		<!-- Meta Description -->
+        <meta name="description" content="Blue One Page Creative HTML5 Template">
+        <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
+        <meta name="author" content="Muhammad Morshed">
+		<!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Google Font -->
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+		<!-- CSS
+		================================================== -->
+		<!-- Fontawesome Icon font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+		<!-- Twitter Bootstrap css -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+		<!-- jquery.fancybox  -->
+        <link rel="stylesheet" href="/css/jquery.fancybox.css">
+		<!-- animate -->
+        <link rel="stylesheet" href="/css/animate.css">
+		<!-- Main Stylesheet -->
+        <link rel="stylesheet" href="/css/main.css">
+		<!-- media-queries -->
+        <link rel="stylesheet" href="/css/media-queries.css">
+
+		<!-- Modernizer Script for old Browsers -->
+        <script src="/js/modernizr-2.6.2.min.js"></script>
+
+    </head>
+
+    <body id="body">
+      <!-- audio -->
+      <audio autoplay>
+      <source src="/1.mp3" type="audio/mp3" >
+      Sorry your Browser doesn't support audio file.
+      </audio>
+      <audio loop onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 269000)">
+      <source src="/2.mp3" type="audio/mp3" >
+      Sorry your Browser doesn't support audio file.
+      </audio>
+      <!-- end audio -->
+
+		<!-- preloader -->
+		<div id="preloader">
+			<img src="/img/loading.gif" alt="Preloader" width="400" height="300">
+		</div>
+		<!-- end preloader -->
+
+        <!--
+        Fixed Navigation
+        ==================================== -->
+
+        <header id="navigation" class="navbar-fixed-top navbar" style="background-color: 0d84b4">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-bars fa-2x"></i>
+                    </button>
+					<!-- /responsive nav button -->
+
+					<!-- logo -->
+                    <a class="navbar-brand" href="#body">
+						<h1 id="logo">
+							<img src="/img/logo.png" alt="IIIT" style="width:100%; height:100%">
+						</h1>
+					</a>
+					<!-- /logo -->
+                </div>
+
+				<!-- main nav -->
+                <nav class="collapse navbar-collapse navbar-right">
+                    <ul id="nav" class="nav navbar-nav">
+                        <li class="current" role="navigation"><a href="#body">Home</a></li>
+                        <li><a href="#works" role="navigation">Events</a></li>
+                        <li><a href="#team" role="navigation">Sponsors</a></li>
+                        <li><a href="#contact" role="navigation">Locate Us</a></li>
+                        <li><a href="#footer" role="navigation">Contact Us</a></li>
+                      <!---  <li><a href="#footer">Contact Us</a></li>-->
+                      <!-- <li><%= link_to 'Login/Register', new_user_session_url %></li> -->
+                      <li><a href="/users/sign_in">Login/Register</a></li>
+                    </ul>
+
+                </nav>
+
+				<!-- /main nav -->
+
+            </div>
+        </header>
+        <!--
+        End Fixed Navigation
+        ==================================== -->
+
+
+
+        <!--
+        Home Slider
+        ==================================== -->
+
+		<section id="slider">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+				<!-- Indicators bullet -->
+				<ol class="carousel-indicators">
+					<!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+-->
+				</ol>
+				<!-- End Indicators bullet -->
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+
+					<!-- single slide -->
+					<div class="item active" style="background-image: url(/img/banner.jpg);">
+						<div class="carousel-caption">
+							<h2 data-wow-duration="1000ms" data-wow-delay="1000ms" class="wow bounceInDown animated"><span> Infin<font font-size="700" color="#0d84b4">&infintie;</font> 2018</span></h2>
+							<!--<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">INSPIRE</span> and be Inspired!</h3>-->
+              <h3 data-wow-duration="1000ms" class="wow slideInLeft animated">IMAGINE | INVIGORATE | INSPIRE</h3>
+
+							<p data-wow-duration="700ms" class="wow slideInRight animated">19-21 January</p>
+
+							<ul class="social-links text-center">
+                <li><a href="https://www.facebook.com/Infin8-2018-376719852758288/"><i class="fa fa-facebook fa-2x"></i></a></li>
+                <li><a href=" https://www.instagram.com/infin8_2018iiitb/?hl=en"><i class="fa fa-instagram fa-2x"></i></a></li>
+                <li><a href="https://twitter.com/Infin8_2018"><i class="fa fa-twitter fa-2x"></i></a></li>
+							</ul
+            >
+              <% if user_signed_in? %>
+                <%= link_to @user.name ,users_url %>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+                <% else %>
+                <%= link_to "Login/Register", new_user_session_path %>
+                <% end %>
+
+              <!-- <li><a href="/users/sign_in">Login/Register</a></li> -->
+              <!-- <button onclick="window.location.href='/users/sign_in'" style="font-size:24px">Login/Register <i class="fa fa-sign-in"></i></button> -->
+						</div>
+					</div>
+					<!-- end single slide -->
+
+					<!-- single slide -->
+					<!--<div class="item active" style="background-image: url(img/banner.jpg);">
+						<div class="carousel-caption">
+							<h2 data-wow-duration="1000ms" data-wow-delay="1000ms" class="wow bounceInDown animated"><span> Infin8 2017</span></h2>
+							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">INSPIRE</span> and be inspired.</h3>
+							<p data-wow-duration="700ms" class="wow slideInRight animated">19-21 January</p>
+
+							<ul class="social-links text-center">
+								<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+								<li><a href="https://www.facebook.com/iiitb.infin8/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+
+							</ul>
+						</div>
+					</div>-->
+					<!-- end single slide -->
+
+
+				</div>
+				<!-- End Wrapper for slides -->
+
+			</div>
+		</section>
+
+        <!--
+        End Home SliderEnd
+        ==================================== -->
+
+        <!--
+        Features
+        ==================================== -->
+
+		<section id="features" class="features">
+			<div class="container">
+				<div class="row">
+
+					<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
+						<h2>What is Infin8 ?</h2>
+						<div class="devider"><i class="fa fa-circle-o fa-lg"></i></div>
+					</div>
+
+					<!-- service item -->
+					<div class="col-md-6 wow fadeInLeft" data-wow-duration="500ms">
+						<div class="service-item">
+							<div class="service-icon">
+								<i class="fa fa-at fa-2x"></i>
+							</div>
+
+							<div class="service-desc">
+								<h3>About Us</h3>
+								<p>Infin8 is the annual cultural-tech fest of IIIT Bangalore. A three day fest organized by the students of IIIT-b,we aim to bring science to students through fun.</p>
+
+							</div>
+						</div>
+					</div>
+					<!-- end service item -->
+
+					<!-- service item -->
+					<div class="col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
+						<div class="service-item">
+							<div class="service-icon">
+								<i class="fa fa-pencil fa-2x"></i>
+							</div>
+
+							<div class="service-desc">
+								<h3>What's New?</h3>
+								<p>Unlike the previous years,this year we are going inter-collegiate. With larger events, a bigger and better Infin8 will raise spirits and bring out the best in us. Come join us! :D</p>
+							</div>
+						</div>
+					</div>
+					<!-- end service item -->
+
+
+
+				</div>
+			</div>
+		</section>
+
+        <!--
+        End Features
+        ==================================== -->
+
+
+        <!--
+        Our Works
+        ==================================== -->
+
+		<section id="works" class="works clearfix">
+			<div class="container">
+				<div class="row">
+
+					<div class="sec-title text-center">
+						<h2>Events</h2>
+						<div class="devider"><i class="fa fa-circle-o fa-lg"></i></div>
+					</div>
+
+					<div class="sec-sub-title text-center">
+          </div>
+
+					<div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
+						<ul class="text-center">
+							<li><a href="javascript:;" data-filter="all" class="active filter">All</a></li>
+							<!--<li><a href="javascript:;" data-filter=".enigma" class="filter">Robotics</a></li>-->
+							<li><a href="javascript:;" data-filter=".photo" class="filter">Photography</a></li>
+							<li><a href="javascript:;" data-filter=".cite" class="filter">Cite.</a></li>
+							<li><a href="javascript:;" data-filter=".music" class="filter">Musicals</a></li>
+							<li><a href="javascript:;" data-filter=".cp" class="filter">Coding</a></li>
+							<li><a href="javascript:;" data-filter=".dance" class="filter">Dance</a></li>
+						<!--	<li><a href="javascript:;" data-filter=".drama" class="filter">Dramatics</a></li>-->
+							<li><a href="javascript:;" data-filter=".lsd" class="filter">LSD</a></li>
+							<li><a href="javascript:;" data-filter=".dj" class="filter">DJ Night</a></li>
+
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="project-wrapper portfolio-items">
+
+				<!--<figure class="mix work-item enigma">
+					<img src="/img/works/enigma.jpg" alt="">
+					<figcaption class="overlay">
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
+                          <h4>ENIGMA</h4>
+                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="Robotics Club">
+						<h4>Build a Bot !</h4>
+					</figcaption>
+				</figure>-->
+
+                <figure class="mix work-item photo">
+					<img src="/img/works/chhayachitra.png" alt="">
+					<figcaption class="overlay">
+                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
+                          <h4>Through the lens!</h4>
+
+                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="Photography Club">
+						<h4>Chhayachitra!</h4>
+						<p></p>
+					</figcaption>
+				</figure>
+
+                <figure class="mix work-item cite">
+                    <img src="/img/works/debate.jpg" alt="">
+                    <figcaption class="overlay">
+                      <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
+                        <h4>Larynx Debate!</h4>
+
+                      <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
+                      <p ><strong>Curate Ideas,Technology,Entertainment</strong></p>
+                      <h4>Cite.</h4>
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item music">
+                    <img src="/img/works/capella.png" alt="">
+                    <figcaption class="overlay">
+                        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
+                          <h4>La la la capella</h4>
+                          <!--Web Design-->
+                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
+                        <h4>Music club</h4>
+                        <!--/<p>Enigma</p>-->
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item music">
+                    <img src="/img/works/rythm.jpg" alt="">
+                    <figcaption class="overlay">
+                        <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
+                          <h4>Rythm</h4>
+                        <!--  Web Design-->
+                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
+                        <h4>Music club</h4>
+                        <!--<p>Music club</p>-->
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item cp">
+                    <img src="/img/works/cp.jpg" alt="">
+                    <figcaption class="overlay">
+                        <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
+                          <h4>Time to run</h4>
+                          <!--Web Design-->
+                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
+                        <h4>Competitive Programming Club</h4>
+                      <!--  <p>Enigma</p>-->
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item dance">
+                    <img src="/img/works/dance.jpg" alt="">
+                    <figcaption class="overlay">
+                        <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
+                          <h4>Whip and nae nae</h4>
+                          <!--Web Design-->
+                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
+                        <h4>Dance Club</h4>
+                        <!--<p>Enigma</p>-->
+                    </figcaption>
+                </figure>
+
+                <figure class="mix work-item lsd">
+                    <img src="/img/works/ship.png" alt="">
+                    <figcaption class="overlay">
+                        <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
+                          <h4>Shipwreck</h4>
+                        <!--  Web Design-->
+                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
+                        <h4>LSD</h4>
+                        <!--<p>Enigma</p>-->
+                    </figcaption>
+                </figure>
+
+        				<figure class="mix work-item lsd">
+        					<img src="/img/works/lof.jpg" alt="">
+        					<figcaption class="overlay">
+                                <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
+                                  <h4>League of Fanatics</h4>
+
+                                <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
+        						<h4>LSD</h4>
+        						<!--<p>Larynx Debate!</p>-->
+        					</figcaption>
+        				</figure>
+
+                <figure class="mix work-item lsd">
+                    <img src="/img/works/la.jpg" alt="">
+                    <figcaption class="overlay">
+                        <a href="#portfolioModal10" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
+                          <h4>The Inquisitive Mind</h4>
+                        <!--  Web Design-->
+                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="LSD">
+                        <h4>Literary Arts</h4>
+                      <!--  <p>LSD</p>-->
+                    </figcaption>
+                </figure>
+
+        				<figure class="mix work-item lsd">
+        					<img src="/img/works/tot.png" alt="">
+        					<figcaption class="overlay">
+                                <a href="#portfolioModal11" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
+                                  <h4>Trick or Treat</h4>
+
+                                <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
+        						<h4>LSD</h4>
+        						<!--<p>Larynx Debate!</p>-->
+        					</figcaption>
+        				</figure>
+
+
+			</div>
+
+
+		</section>
+
+        <!--
+        End Our Works
+        ==================================== -->
+
+        <!--
+        Meet Our Team
+        ==================================== -->
+
+		<section id="team" class="team">
+			<div class="container">
+				<div class="row">
+
+					<div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
+						<h2>Sponsors</h2>
+						<div class="devider"><i class="fa fa-circle-o fa-lg"></i></div>
+					</div>
+
+					<div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
+						<p>This space is for the Sponsors</p>
+					</div>
+
+										<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
+						<div class="member-thumb">
+							<img src="/img/team/member-1.png" alt="Team Member" class="img-responsive">
+							<figcaption class="overlay">
+								<h5>Description of Sponsors</h5>
+								<p>Description of Sponsors</p>
+								<ul class="social-links text-center">
+									<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+									<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+									<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+								</ul>
+							</figcaption>
+						</div>
+            <h4>Sponsor 1</h4>
+						<span>Gibberish</span>
+          </figure>
+
+										<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
+						<div class="member-thumb">
+							<img src="/img/team/member-2.png" alt="Team Member" class="img-responsive">
+							<figcaption class="overlay">
+								<h5>Description of Sponsors </h5>
+								<p>Description of Sponsors</p>
+								<ul class="social-links text-center">
+									<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+									<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+									<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+								</ul>
+							</figcaption>
+						</div>
+            <h4>Sponsor 2</h4>
+						<span>Gibberish</span>
+					</figure>
+
+										<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
+						<div class="member-thumb">
+							<img src="/img/team/member-3.png" alt="Team Member" class="img-responsive">
+							<figcaption class="overlay">
+								<h5>Description of Sponsors </h5>
+								<p>Description of Sponsors</p>
+								<ul class="social-links text-center">
+									<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+									<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+									<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+								</ul>
+							</figcaption>
+						</div>
+            <h4>Sponsor 3</h4>
+						<span>Gibberish</span>
+					</figure>
+
+										<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
+						<div class="member-thumb">
+							<img src="/img/team/member-1.png" alt="Team Member" class="img-responsive">
+							<figcaption class="overlay">
+								<h5>Description of Sponsors </h5>
+								<p>Description of Sponsors</p>
+								<ul class="social-links text-center">
+									<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+									<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+									<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+								</ul>
+							</figcaption>
+						</div>
+						<h4>Sponsor 4</h4>
+						<span>Gibberish</span>
+					</figure>
+
+				</div>
+			</div>
+		</section>
+
+        <!--
+        End Meet Our Team
+        ==================================== -->
+
+		<!--
+        Some fun facts
+        ==================================== -->
+
+		<section id="facts" class="facts">
+			<div class="parallax-overlay">
+				<div class="container">
+					<div class="row number-counters">
+
+						<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
+							<h2>Some Fun Facts</h2>
+							<div class="devider"><i class="fa fa-circle-o fa-lg"></i></div>
+						</div>
+
+						<!-- first count item -->
+                        <div class="col-md-4 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
+							<div class="counters-item">
+								<i class="fa fa-calendar fa-3x"></i>
+								<strong data-to="15">0</strong>
+								<!-- Set Your Number here. i,e. data-to="56" -->
+								<p>Number of Events</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
+							<div class="counters-item">
+								<i class="fa fa-users fa-3x"></i>
+								<strong data-to="1000">0</strong>
+								<!-- Set Your Number here. i,e. data-to="56" -->
+								<p>Expected Footfall</p>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
+							<div class="counters-item">
+								<i class="fa fa-trophy fa-3x"></i>
+								<strong data-to="100">0</strong>
+								<!-- Set Your Number here. i,e. data-to="56" -->
+								<p>Prizes</p>
+							</div>
+						</div>
+						<!-- end first count item -->
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <!--
+        End Some fun facts
+        ==================================== -->
+
+        <!-- Portfolio Modals -->
+        <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+        <!-- Portfolio Modal 1 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>Larynx Debate!</h2>
+                    <p class="item-intro">Brought to you by cite, a club of IIIT-B.</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/01-preview.jpg" alt="">
+                    <p style ="font-size:140%;">For those who don't merely speak but, assert. For those who don't just carry an opinion but, stamp it. For those who don't just have a say but, deliver the verdict. If you have the gift of the gab, we present before you a stage and a worthy opponent. Be warned. The competition is fierce, and the stakes high. String together articulate words and deftness of the rational mind, and victory is yours. Fail to do so, and you are the pawn in the game.</br></br></br><strong><u>RULES</u></strong></br></p>
+                    <p align="left" style ="font-size:120%;">
+                      1. There is no registration fee.</br></br>
+2. The registrations will be closed once the event is in action.</br></br>
+3. The language of the debate will be English.</br></br>
+4. Each team will have 2 members.</br></br>
+5. One speaker will speak for the motion <strong>(4 Minutes)</strong> and the other will speak against the motion <strong>(4 minutes)</strong>. There will be a warning bell after 3 ½ minutes.</br></br>
+6. There will be three rounds. The first round would be a qualifiers round. The qualifying teams will be going forward to the second round and so on.</br></br>
+7. First two rounds have the same set of rules, just that the topic for the second round would be <strong>announced on the spot</strong> (Don’t worry though, you’ll have 10 minutes to prepare for this round!). The last round will be held on the last day of the event.</br></br>
+8. <strong>There will not be any cross-rebuttal rounds</strong>.</br></br>
+9. <strong>Negative marks</strong> shall be awarded for exceeding the time limit.</br></br>
+10. No expression shall be entertained which is offensive, personal or defamatory in nature, use of which shall lead to <strong>elimination</strong>.</br></br>
+11. The participating teams will be judged on the following criterions:</br>
+a. Attitude</br>
+b. Fluency</br>
+c. Relevance</br></br>
+12. <strong>Decision of the judges will be final</strong>.</br></br>
+
+
+                    <!--<ul class="list-inline">
+                      <li style ="font-size:120%;"><strong>Head</strong>: Aditya Vikram Srivastava</li>
+                      <li style ="font-size:120%;"><strong>For any queries mail</strong>:Enigma@iiitb.org</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Modal 2 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>Through the lens !</h2>
+                    <p class="item-intro" style ="font-size:120%;">“Photography for me is not looking, it’s feeling. If you can’t feel what you’re looking at, then you’re never going to get others to feel anything when they look at your pictures.”
+~Don McCullum
+</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/02-preview.jpg" alt="">
+                      <p style =" font-size:140%;">
+Taking pictures is savouring life intensely, every hundredth of a second. Life goes on, but a photograph is a momento of that moment. A photograph has the ability to convey emotion, mood, narrative, ideas and messages. We celebrate photography as an art and provide you with the opportunity to compete with the best in this genre and showcase your talent.</br></br></br><strong><u>RULES</u></strong></br></p>
+<p align="left" style ="font-size:120%;">1. The contestants are expected to submit pictures of any moment, event or scene worth capturing.</br></br>
+2. The participants should be getting their own cameras and the equipment, the organizers will not be providing any devices.</br></br>
+3. There will be no on the spot registration once the contest starts.</br></br>
+4. Submissions will not be accepted once the deadline lapses.</br></br>
+5. You may not submit more than 2 entries for the contest.</br></br>
+6. All the contest photos should be taken within the premises of IIIT Bangalore campus.</br></br>
+7. All the submissions should be the ones clicked after the contest has officially begun.</br></br>
+ 8. Photos prior to that will not be accepted for submissions.</br></br>
+9. The image must not have been published previously in any other publication or website.</br></br>
+10. All submitted photos must contain the original EXIF metadata information.</br></br>
+11. Basic editing, including colour enhancement, the use of filters, and cropping of the Photo(s) is acceptable, provided any such editing does not affect the authenticity and/or genuineness of the Photo(s).</br></br>
+12. Advanced editing used to create illusions, deceptions and/or manipulations, and the adding and removing of significant elements within the frame is prohibited.</br></br>
+13. The organizers are not responsible for any damage, loss or theft of your personal belongings.</br></br>
+14. Entrants confirm that everyone whose image is featured in the contest entry has given consent for the use of his/her image in connection with this contest and in accordance with these Terms and Conditions.</br></br>
+15. All photographers will retain full ownership of their photos but, by entering, you agree to allow us to use the winning images in the promotion of the contest results on our Facebook page, Twitter pages and website. </br></br>
+16. Any personal information and contact details the contestants supply will be used only for the purposes of administering the contest.</br></br>
+</p>
+<!--<ul class="list-inline">
+  <li style ="font-size:120%;"><strong>Head</strong>: Vibhav Agarwal</li>
+  <li style ="font-size:120%;"><strong>For any queries mail</strong>:Vibhav.Agarwal@iiitb.org</li>
+</ul>-->
+<button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Back</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Modal 3 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>La la la capella</h2>
+                    <p class="item-intro" style ="font-size: 120%;">"Life is one grand, sweet song, so start the music. Music is life, that's why heart "beats""
+</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/03-preview.jpg" alt="">
+                    <p style =" font-size:140%;">
+                    <p>Do tap your feet in sync with the beats and words gush out in a poetic tone? For the one who sings knows not no boundaries but only the joy of expression. Nothing is more satisfying than singing your heart out loud. So, let your voice transcend all the boundaries, sing like you have only today to express yourself and get ready to bind the audience to their seats.
+</p>
+                  <!--  <ul class="list-inline">
+                      <li><strong>Client</strong>: John Doe</li>
+                      <li><strong>Category</strong>: Web Design</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Modal 4 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>La la la capella</h2>
+                    <p class="item-intro" style ="font-size: 120%;">"Life is one grand, sweet song, so start the music. Music is life, that's why heart "beats""
+</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/03-preview.jpg" alt="">
+                    <p style =" font-size:140%;">
+                    <p>Do tap your feet in sync with the beats and words gush out in a poetic tone? For the one who sings knows not no boundaries but only the joy of expression. Nothing is more satisfying than singing your heart out loud. So, let your voice transcend all the boundaries, sing like you have only today to express yourself and get ready to bind the audience to their seats.
+</p>
+                  <!--  <ul class="list-inline">
+                      <li><strong>Client</strong>: John Doe</li>
+                      <li><strong>Category</strong>: Web Design</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Modal 5 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>Rythm</h2>
+                    <!--<p class="item-intro">Lorem ipsum dolor sit amet consectetur.</p>-->
+                    <img class="img-responsive img-centered" src="/img/portfolio/05-preview.jpg" alt="">
+                    <p style =" font-size:140%;"><strong>Hey Jude!</strong> Playing music in front of a big crowd is not for the faint hearted. So if you feel like <strong>We Will Rock You</strong>, then get your band, whip out your music and let the crowd go <strong>Numb</strong> because this is the <strong>Carnival Of Rust</strong> and <strong>Nothing Else Matters.</strong> Only the winner gets the <strong>Stairway To Heaven</strong> and to get there, you need to play some of the best music of your life. You may sing <strong>Despacito</strong> or you may be a <strong>Rap God</strong> but <strong>In The End,</strong> all that we care for is good music and some passionate musicians belting it out. If you don’t want to be <strong>Another Brick In The Wall</strong> do get your own instruments to play with because <strong>The Show Must Go On.</strong></p>
+                    <!--<ul class="list-inline">
+                      <li><strong>Client</strong>: John Doe</li>
+                      <li><strong>Category</strong>: Web Design</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Modal 6 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>Time to Run</h2>
+                    <p class="item-intro">-Brought to you by CP club of iiitb.</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/06-preview.jpg" alt="">
+                    <p style =" font-size:140%;">While most people balk when asked to code, some of you secretly stay up nights in front of the screen gazing at the long lines of code working their magic. And this means you are a passionate coder. And if you are indeed passionate, what is stopping you from fighting it out against some of the best coders? Join us in a fun filled competitive programming event and compete against some very good coders for a few rounds on Codeforces and see who emerges victorious. It’s that easy!! (maybe not for you!)</p>
+                  <!--  <ul class="list-inline">
+                      <li><strong>Client</strong>: John Doe</li>
+                      <li><strong>Category</strong>: Web Design</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Modal 7 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>Whip and nae nae!</h2>
+                    <p class="item-intro">Lorem ipsum dolor sit amet consectetur.</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/07-preview.jpg" alt="">
+                    <p style =" font-size:140%;">Lorem ipsum dolor sit amet, sea essent iisque iudicabit te, pro no justo delicata inimicus, et oblique docendi laboramus eum. Ei minim fabulas pertinacia pro, graeco urbanitas reformidans quo id. Error congue tacimates ei vis, facer facete ius cu, audiam prodesset pri ut. Id semper fuisset vel, has dolorum menandri eu.</p>
+                    <ul class="list-inline">
+                      <li><strong>Client</strong>: John Doe</li>
+                      <li><strong>Category</strong>: Web Design</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Modal 8 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>Shipwreck!</h2>
+                    <p class="item-intro">Lorem ipsum dolor sit amet consectetur.</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
+                    <p style =" font-size:140%;">You are on Titanic sailing across Atlantic. But the "unsinkable" ship, the largest, most luxurious ocean liner of its time, crashed into an iceberg on its maiden voyage. You are a renowned celebrity stuck in a sinking ship. Sadly, there are only 2 life-jackets  of which one belongs to the captain of course. One  remaining  life-jacket  will  be  given  to  the  person  whose  life  is  most  important  to  the world. Justify why YOU must get a chance to outlive thousands of people on the ship. Explain why does the world need you? Can you explain your purpose of life? Earn the life-jacket and you earn our respect! </br></br></br><strong><u>RULES</u></strong></br></p>
+                    <p align="left" style ="font-size:120%;">1. Each round will be held in group
+s.</br></br>2. Each player in a group will be given a character on a sinking ship; only one of them can be saved.</br></br>3. Depending on the characters, the participant has to justify why they should be the one
+who is saved.</p>
+                    <!--<ul class="list-inline">
+                      <li><strong>Client</strong>: John Doe</li>
+                      <li><strong>Category</strong>: Web Design</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Modal 9 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>League Of Fanatics!</h2>
+                    <p class="item-intro">-Brought to you by comic club of iiitb.</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
+                    <p style =" font-size:140%;"> Start re-watching your anime and TV shows, cuz League of Fanatics is here! For all you nerds out there who have been told that your hours (or days) of binging is never productive.... well, now it is! Want to test your knowledge and put all of your hard work to use? Well then, League of Fanatics @Infin8 is just the thing for you! Each team can have 3-4 people, so make sure you get the right guys for the job! There will be a screening round out of which the top 8 teams will be selected for the main event, which will consist of different interactive rounds that will put your knowledge and acumen to the test. Cool prizes await the winners, so don’t hold back! Oh yeah, don’t forget to come up with a cool team name too! Get binging!</p><!-- </br></br></br><strong><u>RULES</u></strong></br></p>
+                    <p align="left" style ="font-size:120%;">1. Each round will be held in group
+s.</br></br>2. Each player in a group will be given a character on a sinking ship; only one of them can be saved.</br></br>3. Depending on the characters, the participant has to justify why they should be the one
+who is saved.</p>-->
+                    <!--<ul class="list-inline">
+                      <li><strong>Client</strong>: John Doe</li>
+                      <li><strong>Category</strong>: Web Design</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Modal 10 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>The Inquisitive Mind</h2>
+                    <p class="item-intro">- brought to you by Literary Arts club of iiitb.</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
+                    <p style =" font-size:140%;">Literary art is the integrative discipline of appreciation and creative writing. At Infin8, we’re curious to delve into your mind, on how you see this beautiful world through our eyes and how well you communicate it to other people’s minds. The gist is simple. You’ll be shown a picture, anything from a meme template to an ice-cream, and you have to express your thoughts on how you visualize it, in the most creative way possible. </br></br></br><strong><u>RULES</u></strong></br></p>
+                    <p align="left" style ="font-size:120%;">1.  No phones are allowed.</br></br>2. Maximum 30 minutes will be given to each participant.</br></br>3. Maximum word limit 500 words.</br></br>For venue and timing, contact the event coordinator.</p>
+                    <!--<ul class="list-inline">
+                      <li><strong>Client</strong>: John Doe</li>
+                      <li><strong>Category</strong>: Web Design</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Modal 11 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>Trick or Treat!</h2>
+                    <p class="item-intro">"I dream my painting and I paint my dreams."</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
+                    <p style =" font-size:140%;"><strong>3-D Painting!</strong> Doesn't that seem interesting? Participate and deceit us to conquer...</br>Paint your 3-D ideas on a 2-D sheet. Paint your imaginations using your own brushes and colors.</br>And be ready for <strong>Battle of the Brush.</strong> </br></p><!--</br></br><strong><u>RULES</u></strong></br></p>
+                    <p align="left" style ="font-size:120%;">1. Each round will be held in group
+s.</br></br>2. Each player in a group will be given a character on a sinking ship; only one of them can be saved.</br></br>3. Depending on the characters, the participant has to justify why they should be the one
+who is saved.</p>-->
+                    <!--<ul class="list-inline">
+                      <li><strong>Client</strong>: John Doe</li>
+                      <li><strong>Category</strong>: Web Design</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+		<!--
+        Contact Us
+        ==================================== -->
+
+		<section id="contact" class="contact">
+            <!-- Google map -->
+            <div id="map_canvas" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
+            <!-- End Google map -->
+            <br>
+			<div class="container">
+				<div class="row mb50">
+
+					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
+						<h2>Have a Query ?</h2>
+						<div class="devider"><i class="fa fa-circle-o fa-lg"></i></div>
+					</div>
+
+					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+					</div>
+
+					<!-- contact address -->
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeInLeft animated" data-wow-duration="500ms">
+						<div class="contact-address">
+							<p>26/C,Hosur Rd,Electronics City Phase 1, Electronic City</p>
+							<p>Karnataka,India.</p>
+							<p>560100</p>
+						</div>
+					</div>
+					<!-- end contact address -->
+
+					<!-- contact form -->
+					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
+						<div class="contact-form">
+							<form action="mailto:Infin8-2018@iiitb.org" id="contact-form">
+								<div class="input-group name-email">
+									<div class="input-field">
+										<input type="text" name="name" id="name" placeholder="Name" class="form-control">
+									</div>
+									<div class="input-field">
+										<input type="email" name="email" id="email" placeholder="Email" class="form-control">
+									</div>
+								</div>
+								<div class="input-group">
+									<textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
+								</div>
+								<div class="input-group">
+									<input type="submit" id="form-submit" class="pull-right" value="Send message">
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- end contact form -->
+
+					<!-- footer social links -->
+					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="600ms">
+						<ul class="footer-social">
+              <li><a href="https://www.facebook.com/Infin8-2018-376719852758288/"><i class="fa fa-facebook fa-2x"></i></a></li>
+              <li><a href=" https://www.instagram.com/infin8_2018iiitb/?hl=en"><i class="fa fa-instagram fa-2x"></i></a></li>
+              <li><a href="https://twitter.com/Infin8_2018"><i class="fa fa-twitter fa-2x"></i></a></li>
+						</ul>
+					</div>
+					<!-- end footer social links -->
+
+				</div>
+			</div>
+
+		</section>
+
+        <!--
+        End Contact Us
+        ==================================== -->
+
+
+		<footer id="footer" class="footer">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms">
+						<div class="footer-single">
+							<img src="/img/footer-logo.png" alt="">
+							<p>The Annual Fest of IIIT-B.</p>
+						</div>
+					</div>
+
+
+					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
+						<div class="footer-single">
+              <h6>FAQS</br></h6>
+              <ul>
+                <a href="/pdf/FAQ.pdf" download>Click to download !</a>
+              </ul>
+            </br></br>
+
+							<h6>Connect With Us!</h6>
+							<ul>
+								<li><a href="https://www.facebook.com/Infin8-2018-376719852758288/">Facebook</a></li>
+								<li><a href=" https://www.instagram.com/infin8_2018iiitb/?hl=en">Instagram</a></li>
+								<li><a href="https://twitter.com/Infin8_2018">Twitter</a></li>
+							</ul>
+            	</div>
+					</div>
+
+
+
+					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
+						<div class="footer-single">
+							<h6>Contact : </br></h6>
+							<ul>
+                <li><h6>Lakshay Jindal </h6>Lakshay.infin8@iiitb.org (+91-8860085061)</li>
+                <li><h6>Anshika Gupta </h6>Anshika.infin8@iiitb.org  (+91-9945044518)</li>
+                <li><h6>Surya Peruri </h6>Surya.infin8@iiitb.org (+91-8618840588)</li>
+                <li><h6>Arushi Mohania </h6>Arushi.infin8@iiitb.org (+91-9739094261)</li>
+                </ul>
+						</div>
+					</div>
+          <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
+						<div class="footer-single">
+            </br>
+							<ul>
+                <li><h6>Varada Desikan </h6>Varada.infin8@iiitb.org (+91-9741129355)</li>
+                <li><h6>Nishant Malpani </h6>Nishant.infin8@iiitb.org (+91-8424962073)</li>
+								<li><h6>Priyank Rai</h6>Priyank.infin8@iiitb.org (+91-7898920237)</li>
+								<li><h6>Nitesh Singh Baghel</h6>Nitesh.infin8@iiitb.org(+91-9827936494)</li>
+							</ul>
+						</div>
+					</div>
+
+
+
+				</div>
+
+			</div>
+		</footer>
+
+		<a href="javascript:void(0);" id="back-top"><i class="fa fa-chevron-circle-up fa-3x" style="color:#0d84b4"></i></a><!--2b6350-->
+
+		<!-- Essential jQuery Plugins
+		================================================== -->
+		<!-- Main jQuery -->
+        <script src="/js/jquery-1.11.1.min.js"></script>
+		<!-- Single Page Nav -->
+        <script src="/js/jquery.singlePageNav.min.js"></script>
+		<!-- Twitter Bootstrap -->
+        <script src="/js/bootstrap.min.js"></script>
+		<!-- jquery.fancybox.pack -->
+        <script src="/js/jquery.fancybox.pack.js"></script>
+		<!-- jquery.mixitup.min -->
+        <script src="/js/jquery.mixitup.min.js"></script>
+		<!-- jquery.parallax -->
+        <script src="/js/jquery.parallax-1.1.3.js"></script>
+		<!-- jquery.countTo -->
+        <script src="/js/jquery-countTo.js"></script>
+		<!-- jquery.appear -->
+        <script src="/js/jquery.appear.js"></script>
+		<!-- Contact form validation -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+		<!-- Google Map -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <!--<script type="text/javascript" src="https://www.google.co.in/maps/dir/''/locate+iiit+bangalore/@12.8447419,77.5931912,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3bae135aeb7f340f:0x3ad86af40d2ac611!2m2!1d77.6632317!2d12.8447512"></script> -->
+       <!-- <h1>Google Map</h1>
+
+<div id="map" style="width:700px;height:400px;background:yellow"></div>
+
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(12.845111, 77.663306),
+    zoom: 15,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>-->
+		<!-- jquery easing -->
+        <script src="/js/jquery.easing.min.js"></script>
+		<!-- jquery easing -->
+        <script src="/js/wow.min.js"></script>
+		<script>
+			var wow = new WOW ({
+				boxClass:     'wow',      // animated element css class (default is wow)
+				animateClass: 'animated', // animation css class (default is animated)
+				offset:       120,          // distance to the element when triggering the animation (default is 0)
+				mobile:       false,       // trigger animations on mobile devices (default is true)
+				live:         true        // act on asynchronously loaded content (default is true)
+			  }
+			);
+			wow.init();
+		</script>
+		<!-- Custom Functions -->
+        <script src="/js/custom.js"></script>
+
+		<script type="text/javascript">
+			$(function(){
+				/* ========================================================================= */
+				/*	Contact Form
+				/* ========================================================================= */
+
+				$('#contact-form').validate({
+					rules: {
+						name: {
+							required: true,
+							minlength: 2
+						},
+						email: {
+							required: true,
+							email: true
+						},
+						message: {
+							required: true
+						}
+					},
+					messages: {
+						name: {
+							required: "come on, you have a name don't you?",
+							minlength: "your name must consist of at least 2 characters"
+						},
+						email: {
+							required: "no email, no message"
+						},
+						message: {
+							required: "um...yea, you have to write something to send this form.",
+							minlength: "thats all? really?"
+						}
+					},
+					submitHandler: function(form) {
+						$(form).ajaxSubmit({
+							type:"POST",
+							data: $(form).serialize(),
+							url:"process.php",
+							success: function() {
+								$('#contact-form :input').attr('disabled', 'disabled');
+								$('#contact-form').fadeTo( "slow", 0.15, function() {
+									$(this).find(':input').attr('disabled', 'disabled');
+									$(this).find('label').css('cursor','default');
+									$('#success').fadeIn();
+								});
+							},
+							error: function() {
+								$('#contact-form').fadeTo( "slow", 0.15, function() {
+									$('#error').fadeIn();
+								});
+							}
+						});
+					}
+				});
+			});
+		</script>
+    </body>
+</html>
