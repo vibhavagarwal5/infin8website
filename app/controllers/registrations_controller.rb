@@ -6,6 +6,10 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def after_sign_in_path_for(resource)
-    root_path
+    if current_user.admin == true
+      rails_admin.dashboard_path
+    else
+      root_path
+    end
   end
 end
