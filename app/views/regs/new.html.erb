@@ -1,5 +1,36 @@
 <h1>New Reg</h1>
 
-<%= render 'form', reg: @reg %>
+<%= form_with(model: @reg, local: true) do |form| %>
+  <% if @reg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reg.errors.count, "error") %> prohibited this @reg from being saved:</h2>
+
+      <ul>
+      <% @reg.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :reg_user_id %>
+  </div>
+
+  <!-- <div class="field"> -->
+    <!-- <%= form.label :event_id %> -->
+    <input hidden id="reg_event_id" name="reg[event_id]" value="<%= @eid %>">
+  <!-- </div> -->
+
+  <div class="field">
+    <%= form.label :team_name %>
+    <%= form.text_field :team_name, id: :reg_team_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
 
 <%= link_to 'Back', regs_path %>

@@ -15,6 +15,7 @@ class RegsController < ApplicationController
   # GET /regs/new
   def new
     @reg = Reg.new
+    @eid=params[:eid]
   end
 
   # GET /regs/1/edit

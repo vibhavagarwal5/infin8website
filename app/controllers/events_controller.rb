@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events=Event.all
   end
 
   # GET /events/1
@@ -25,7 +25,13 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-
+    # if (params[:eid].blank?)
+    #   @events = Event.all
+    #   render
+    # else
+    #     @eid=params[:eid]
+    #     redirect_to root_path
+    # end
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }

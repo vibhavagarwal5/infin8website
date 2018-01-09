@@ -14,14 +14,19 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= event.name %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <form method="post" enctype="multipart/form-data" action="/regs/new">
+          <p>
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          </p>
+          <input hidden name="eid" value= "<%= event.id %>">
+          <p>
+              <input type="submit" value="Register for this">
+          </p>
+      </form>
+        <!-- <td><%= link_to 'Register for this', event %></td> -->
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Event', new_event_path %>

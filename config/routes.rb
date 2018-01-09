@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :regs
   resources :events
+  post '/regs/new', to: 'regs#new', as: 'regs_post'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -11,5 +12,5 @@ Rails.application.routes.draw do
   # get '/users/:id/edit' to: 'users#edit', as: ''
   resources :users
   get '/front', to: 'frontend#index', as: 'front'
-  root to: "users#index"
+  root to: "frontend#index"
     end
