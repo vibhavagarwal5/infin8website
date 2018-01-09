@@ -1,6 +1,6 @@
 class RegsController < ApplicationController
   before_action :set_reg, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /regs
   # GET /regs.json
   def index

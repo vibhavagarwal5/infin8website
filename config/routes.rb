@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   # # delete '/users/:id', to: 'users#destroy'
   # get '/users/:id/edit' to: 'users#edit', as: ''
   resources :users
+  get '/front', to: 'frontend#index', as: 'front'
   root to: "users#index"
     end
