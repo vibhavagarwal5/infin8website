@@ -574,26 +574,31 @@
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Through the lens !</h2>
-                    <% @is_true=0 %>
-                    <% @a.each do |reg| %>
-                      <% if reg==2 %>
-                        <% @is_true=1 %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==2 %>
+                          <% @is_true=1 %>
+                        <% end %>
                       <% end %>
-                    <% end %>
-                    <% if @is_true==0 %>
-                      <form method="post" enctype="multipart/form-data" action="/regs/new">
-                        <p>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        </p>
-                        <input hidden name="eid" value= "2">
-                        <input hidden name="usid" value= "<%= @user.id %>">
-                        <p>
-                            <input type="submit" value="Register for this">
-                        </p>
-                    </form>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden name="eid" value= "2">
+                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <p>
+                              <input type="submit" value="Register for this">
+                          </p>
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
                     <% else %>
-                      <p><h6> Already registered </h6></p>
+                      <%= link_to "Login to register", new_user_session_path %>
                     <% end %>
+
                     <p class="item-intro" style ="font-size:120%;">“Photography for me is not looking, it’s feeling. If you can’t feel what you’re looking at, then you’re never going to get others to feel anything when they look at your pictures.”
 ~Don McCullum
 </p>
@@ -644,26 +649,31 @@ Taking pictures is savouring life intensely, every hundredth of a second. Life g
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Larynx Debate!</h2>
-                    <% @is_true=0 %>
-                    <% @a.each do |reg| %>
-                      <% if reg==1 %>
-                        <% @is_true=1 %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==1 %>
+                          <% @is_true=1 %>
+                        <% end %>
                       <% end %>
-                    <% end %>
-                    <% if @is_true==0 %>
-                      <form method="post" enctype="multipart/form-data" action="/regs/new">
-                        <p>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        </p>
-                        <input hidden name="eid" value= "1">
-                        <input hidden name="usid" value= "<%= @user.id %>">
-                        <p>
-                            <input type="submit" value="Register for this">
-                        </p>
-                    </form>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden name="eid" value= "1">
+                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <p>
+                              <input type="submit" value="Register for this">
+                          </p>
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
                     <% else %>
-                      <p><h6> Already registered </h6></p>
+                      <%= link_to "Login to register", new_user_session_path %>
                     <% end %>
+
                     <p class="item-intro">Brought to you by cite, a club of IIIT-B.</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/01-preview.jpg" alt="">
                     <p style ="font-size:140%;">For those who don't merely speak but, assert. For those who don't just carry an opinion but, stamp it. For those who don't just have a say but, deliver the verdict. If you have the gift of the gab, we present before you a stage and a worthy opponent. Be warned. The competition is fierce, and the stakes high. String together articulate words and deftness of the rational mind, and victory is yours. Fail to do so, and you are the pawn in the game.</br></br></br><strong><u>RULES</u></strong></br></p>
@@ -712,26 +722,31 @@ c. Relevance</br></br>
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>La la la capella</h2>
-                    <% @is_true=0 %>
-                    <% @a.each do |reg| %>
-                      <% if reg==3 %>
-                        <% @is_true=1 %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==3 %>
+                          <% @is_true=1 %>
+                        <% end %>
                       <% end %>
-                    <% end %>
-                    <% if @is_true==0 %>
-                      <form method="post" enctype="multipart/form-data" action="/regs/new">
-                        <p>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        </p>
-                        <input hidden name="eid" value= "3">
-                        <input hidden name="usid" value= "<%= @user.id %>">
-                        <p>
-                            <input type="submit" value="Register for this">
-                        </p>
-                    </form>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden name="eid" value= "3">
+                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <p>
+                              <input type="submit" value="Register for this">
+                          </p>
+                      </form>
+                      <% else %>
+                        <p> Already registered </p>
+                      <% end %>
                     <% else %>
-                      <p> Already registered </p>
+                      <%= link_to "Login to register", new_user_session_path %>
                     <% end %>
+
                      <p class="item-intro" style ="font-size: 120%;">"Life is one grand, sweet song, so start the music. Music is life, that's why heart "beats""
 </p>
                     <img class="img-responsive img-centered" src="/img/portfolio/03-preview.jpg" alt="">
@@ -763,25 +778,29 @@ c. Relevance</br></br>
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>La la la capella</h2>
-                    <% is_true=0 %>
-                    <% @a.each do |reg| %>
-                      <% if reg==3 %>
-                        <% is_true=1 %>
+                    <% if user_signed_in? %>
+                      <% is_true=0 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==3 %>
+                          <% is_true=1 %>
+                        <% end %>
                       <% end %>
-                    <% end %>
-                    <% if is_true==0 %>
-                      <form method="post" enctype="multipart/form-data" action="/regs/new">
-                        <p>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        </p>
-                        <input hidden name="eid" value= "3">
-                        <input hidden name="usid" value= "<%= @user.id %>">
-                        <p>
-                            <input type="submit" value="Register for this">
-                        </p>
-                    </form>
+                      <% if is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden name="eid" value= "3">
+                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <p>
+                              <input type="submit" value="Register for this">
+                          </p>
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
                     <% else %>
-                      <p><h6> Already registered </h6></p>
+                      <%= link_to "Login to register", new_user_session_path %>
                     <% end %>
                     <p class="item-intro" style ="font-size: 120%;">"Life is one grand, sweet song, so start the music. Music is life, that's why heart "beats""
 </p>
@@ -814,25 +833,29 @@ c. Relevance</br></br>
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Rythm</h2>
-                    <% @is_true=0 %>
-                    <% @a.each do |reg| %>
-                      <% if reg==4 %>
-                        <% @is_true=1 %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==4 %>
+                          <% @is_true=1 %>
+                        <% end %>
                       <% end %>
-                    <% end %>
-                    <% if @is_true==0 %>
-                      <form method="post" enctype="multipart/form-data" action="/regs/new">
-                        <p>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        </p>
-                        <input hidden name="eid" value= "4">
-                        <input hidden name="usid" value= "<%= @user.id %>">
-                        <p>
-                            <input type="submit" value="Register for this">
-                        </p>
-                    </form>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden name="eid" value= "4">
+                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <p>
+                              <input type="submit" value="Register for this">
+                          </p>
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
                     <% else %>
-                      <p><h6> Already registered </h6></p>
+                      <%= link_to "Login to register", new_user_session_path %>
                     <% end %>
                     <!--<p class="item-intro">Lorem ipsum dolor sit amet consectetur.</p>-->
                     <img class="img-responsive img-centered" src="/img/portfolio/05-preview.jpg" alt="">
@@ -862,25 +885,29 @@ c. Relevance</br></br>
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Time to Run</h2>
-                    <% @is_true=0 %>
-                    <% @a.each do |reg| %>
-                      <% if reg==5 %>
-                        <% @is_true=1 %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==5 %>
+                          <% @is_true=1 %>
+                        <% end %>
                       <% end %>
-                    <% end %>
-                    <% if @is_true==0 %>
-                      <form method="post" enctype="multipart/form-data" action="/regs/new">
-                        <p>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        </p>
-                        <input hidden name="eid" value= "5">
-                        <input hidden name="usid" value= "<%= @user.id %>">
-                        <p>
-                            <input type="submit" value="Register for this">
-                        </p>
-                    </form>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden name="eid" value= "5">
+                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <p>
+                              <input type="submit" value="Register for this">
+                          </p>
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
                     <% else %>
-                      <p><h6> Already registered </h6></p>
+                      <%= link_to "Login to register", new_user_session_path %>
                     <% end %>
                     <p class="item-intro">-Brought to you by CP club of iiitb.</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/06-preview.jpg" alt="">
@@ -910,25 +937,29 @@ c. Relevance</br></br>
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Whip and nae nae!</h2>
-                    <% @is_true=0 %>
-                    <% @a.each do |reg| %>
-                      <% if reg==6 %>
-                        <% @is_true=1 %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==6 %>
+                          <% @is_true=1 %>
+                        <% end %>
                       <% end %>
-                    <% end %>
-                    <% if @is_true==0 %>
-                      <form method="post" enctype="multipart/form-data" action="/regs/new">
-                        <p>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        </p>
-                        <input hidden name="eid" value= "6">
-                        <input hidden name="usid" value= "<%= @user.id %>">
-                        <p>
-                            <input type="submit" value="Register for this">
-                        </p>
-                    </form>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden name="eid" value= "6">
+                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <p>
+                              <input type="submit" value="Register for this">
+                          </p>
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
                     <% else %>
-                      <p><h6> Already registered </h6></p>
+                      <%= link_to "Login to register", new_user_session_path %>
                     <% end %>
                     <p class="item-intro">Lorem ipsum dolor sit amet consectetur.</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/07-preview.jpg" alt="">
@@ -958,26 +989,31 @@ c. Relevance</br></br>
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Shipwreck!</h2>
-                    <% @is_true=0 %>
-                    <% @a.each do |reg| %>
-                      <% if reg==7 %>
-                        <% @is_true=1 %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==7 %>
+                          <% @is_true=1 %>
+                        <% end %>
                       <% end %>
-                    <% end %>
-                    <% if @is_true==0 %>
-                      <form method="post" enctype="multipart/form-data" action="/regs/new">
-                        <p>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        </p>
-                        <input hidden name="eid" value= "7">
-                        <input hidden name="usid" value= "<%= @user.id %>">
-                        <p>
-                            <input type="submit" value="Register for this">
-                        </p>
-                    </form>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden name="eid" value= "7">
+                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <p>
+                              <input type="submit" value="Register for this">
+                          </p>
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
                     <% else %>
-                      <p><h6> Already registered </h6></p>
+                      <%= link_to "Login to register", new_user_session_path %>
                     <% end %>
+
                     <p class="item-intro">Lorem ipsum dolor sit amet consectetur.</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
                     <p style =" font-size:140%;">You are on Titanic sailing across Atlantic. But the "unsinkable" ship, the largest, most luxurious ocean liner of its time, crashed into an iceberg on its maiden voyage. You are a renowned celebrity stuck in a sinking ship. Sadly, there are only 2 life-jackets  of which one belongs to the captain of course. One  remaining  life-jacket  will  be  given  to  the  person  whose  life  is  most  important  to  the world. Justify why YOU must get a chance to outlive thousands of people on the ship. Explain why does the world need you? Can you explain your purpose of life? Earn the life-jacket and you earn our respect! </br></br></br><strong><u>RULES</u></strong></br></p>
@@ -1010,26 +1046,31 @@ who is saved.</p>
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>League Of Fanatics!</h2>
-                    <% @is_true=0 %>
-                    <% @a.each do |reg| %>
-                      <% if reg==8 %>
-                        <% @is_true=1 %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==8 %>
+                          <% @is_true=1 %>
+                        <% end %>
                       <% end %>
-                    <% end %>
-                    <% if @is_true==0 %>
-                      <form method="post" enctype="multipart/form-data" action="/regs/new">
-                        <p>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        </p>
-                        <input hidden name="eid" value= "8">
-                        <input hidden name="usid" value= "<%= @user.id %>">
-                        <p>
-                            <input type="submit" value="Register for this">
-                        </p>
-                    </form>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden name="eid" value= "8">
+                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <p>
+                              <input type="submit" value="Register for this">
+                          </p>
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
                     <% else %>
-                      <p><h6> Already registered </h6></p>
+                      <%= link_to "Login to register", new_user_session_path %>
                     <% end %>
+
                     <p class="item-intro">-Brought to you by comic club of iiitb.</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
                     <p style =" font-size:140%;"> Start re-watching your anime and TV shows, cuz League of Fanatics is here! For all you nerds out there who have been told that your hours (or days) of binging is never productive.... well, now it is! Want to test your knowledge and put all of your hard work to use? Well then, League of Fanatics @Infin8 is just the thing for you! Each team can have 3-4 people, so make sure you get the right guys for the job! There will be a screening round out of which the top 8 teams will be selected for the main event, which will consist of different interactive rounds that will put your knowledge and acumen to the test. Cool prizes await the winners, so don’t hold back! Oh yeah, don’t forget to come up with a cool team name too! Get binging!</p><!-- </br></br></br><strong><u>RULES</u></strong></br></p>
@@ -1062,26 +1103,31 @@ who is saved.</p>-->
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>The Inquisitive Mind</h2>
-                    <% @is_true=0 %>
-                    <% @a.each do |reg| %>
-                      <% if reg==9 %>
-                        <% @is_true=1 %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==9 %>
+                          <% @is_true=1 %>
+                        <% end %>
                       <% end %>
-                    <% end %>
-                    <% if @is_true==0 %>
-                      <form method="post" enctype="multipart/form-data" action="/regs/new">
-                        <p>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        </p>
-                        <input hidden name="eid" value= "9">
-                        <input hidden name="usid" value= "<%= @user.id %>">
-                        <p>
-                            <input type="submit" value="Register for this">
-                        </p>
-                    </form>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden name="eid" value= "9">
+                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <p>
+                              <input type="submit" value="Register for this">
+                          </p>
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
                     <% else %>
-                      <p><h6> Already registered </h6></p>
+                      <%= link_to "Login to register", new_user_session_path %>
                     <% end %>
+
                     <p class="item-intro">- brought to you by Literary Arts club of iiitb.</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
                     <p style =" font-size:140%;">Literary art is the integrative discipline of appreciation and creative writing. At Infin8, we’re curious to delve into your mind, on how you see this beautiful world through our eyes and how well you communicate it to other people’s minds. The gist is simple. You’ll be shown a picture, anything from a meme template to an ice-cream, and you have to express your thoughts on how you visualize it, in the most creative way possible. </br></br></br><strong><u>RULES</u></strong></br></p>
@@ -1112,26 +1158,31 @@ who is saved.</p>-->
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Trick or Treat!</h2>
-                    <% @is_true=0 %>
-                    <% @a.each do |reg| %>
-                      <% if reg==10 %>
-                        <% @is_true=1 %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==10 %>
+                          <% @is_true=1 %>
+                        <% end %>
                       <% end %>
-                    <% end %>
-                    <% if @is_true==0 %>
-                      <form method="post" enctype="multipart/form-data" action="/regs/new">
-                        <p>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                        </p>
-                        <input hidden name="eid" value= "10">
-                        <input hidden name="usid" value= "<%= @user.id %>">
-                        <p>
-                            <input type="submit" value="Register for this">
-                        </p>
-                    </form>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden name="eid" value= "10">
+                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <p>
+                              <input type="submit" value="Register for this">
+                          </p>
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
                     <% else %>
-                      <p><h6> Already registered </h6></p>
+                      <%= link_to "Login to register", new_user_session_path %>
                     <% end %>
+
                     <p class="item-intro">"I dream my painting and I paint my dreams."</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
                     <p style =" font-size:140%;"><strong>3-D Painting!</strong> Doesn't that seem interesting? Participate and deceit us to conquer...</br>Paint your 3-D ideas on a 2-D sheet. Paint your imaginations using your own brushes and colors.</br>And be ready for <strong>Battle of the Brush.</strong> </br></p><!--</br></br><strong><u>RULES</u></strong></br></p>
