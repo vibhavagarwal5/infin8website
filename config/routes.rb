@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :regs
   resources :events
   post '/regs/new', to: 'regs#new', as: 'regs_post'
+  post '/sendquery', to: 'frontend#sendmail', as: 'send_query'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }

@@ -16,4 +16,12 @@ class FrontendController<ApplicationController
     # print @a.name
     # print "SUPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"
   end
+
+  def sendmail
+    @name=params[:name]
+    @email=params[:email]
+    @message=params[:message]
+    UserMailer.query_mail(@name,@email,@message).deliver
+  end
+
 end
