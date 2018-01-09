@@ -4,12 +4,24 @@ class RegsController < ApplicationController
   # GET /regs
   # GET /regs.json
   def index
+    @user = User.find params[:id]
+    unless current_user == @user
+      flash[:notice] = "You don't have access!"
+      redirect_to root_path
+      return
+    end
     @regs = Reg.all
   end
 
   # GET /regs/1
   # GET /regs/1.json
   def show
+    @user = User.find params[:id]
+    unless current_user == @user
+      flash[:notice] = "You don't have access!"
+      redirect_to root_path
+      return
+    end
   end
 
   # GET /regs/new
@@ -17,11 +29,17 @@ class RegsController < ApplicationController
     @reg = Reg.new
     @eid=params[:eid]
     @usid=params[:usid]
-    
+
   end
 
   # GET /regs/1/edit
   def edit
+    @user = User.find params[:id]
+    unless current_user == @user
+      flash[:notice] = "You don't have access!"
+      redirect_to root_path
+      return
+    end
   end
 
   # POST /regs
@@ -31,7 +49,8 @@ class RegsController < ApplicationController
 
     respond_to do |format|
       if @reg.save
-        format.html { redirect_to root_path , notice: 'Reg was successfully created.' }
+        flash[:success] = "Successfully registered!"
+        format.html { redirect_to root_path }
         format.json { render :show, status: :created, location: @reg }
       else
         format.html { render :new }
