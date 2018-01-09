@@ -16,6 +16,8 @@ class RegsController < ApplicationController
   def new
     @reg = Reg.new
     @eid=params[:eid]
+    @usid=params[:usid]
+    
   end
 
   # GET /regs/1/edit
@@ -29,7 +31,7 @@ class RegsController < ApplicationController
 
     respond_to do |format|
       if @reg.save
-        format.html { redirect_to @reg, notice: 'Reg was successfully created.' }
+        format.html { redirect_to root_path , notice: 'Reg was successfully created.' }
         format.json { render :show, status: :created, location: @reg }
       else
         format.html { render :new }

@@ -561,54 +561,6 @@
 
         <!-- Portfolio Modals -->
         <!-- Use the modals below to showcase details about your portfolio projects! -->
-
-        <!-- Portfolio Modal 1 -->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"> </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                  <div class="modal-body">
-                    <!-- Project Details Go Here -->
-                    <h2>Larynx Debate!</h2>
-                    <p class="item-intro">Brought to you by cite, a club of IIIT-B.</p>
-                    <img class="img-responsive img-centered" src="/img/portfolio/01-preview.jpg" alt="">
-                    <p style ="font-size:140%;">For those who don't merely speak but, assert. For those who don't just carry an opinion but, stamp it. For those who don't just have a say but, deliver the verdict. If you have the gift of the gab, we present before you a stage and a worthy opponent. Be warned. The competition is fierce, and the stakes high. String together articulate words and deftness of the rational mind, and victory is yours. Fail to do so, and you are the pawn in the game.</br></br></br><strong><u>RULES</u></strong></br></p>
-                    <p align="left" style ="font-size:120%;">
-                      1. There is no registration fee.</br></br>
-2. The registrations will be closed once the event is in action.</br></br>
-3. The language of the debate will be English.</br></br>
-4. Each team will have 2 members.</br></br>
-5. One speaker will speak for the motion <strong>(4 Minutes)</strong> and the other will speak against the motion <strong>(4 minutes)</strong>. There will be a warning bell after 3 ½ minutes.</br></br>
-6. There will be three rounds. The first round would be a qualifiers round. The qualifying teams will be going forward to the second round and so on.</br></br>
-7. First two rounds have the same set of rules, just that the topic for the second round would be <strong>announced on the spot</strong> (Don’t worry though, you’ll have 10 minutes to prepare for this round!). The last round will be held on the last day of the event.</br></br>
-8. <strong>There will not be any cross-rebuttal rounds</strong>.</br></br>
-9. <strong>Negative marks</strong> shall be awarded for exceeding the time limit.</br></br>
-10. No expression shall be entertained which is offensive, personal or defamatory in nature, use of which shall lead to <strong>elimination</strong>.</br></br>
-11. The participating teams will be judged on the following criterions:</br>
-a. Attitude</br>
-b. Fluency</br>
-c. Relevance</br></br>
-12. <strong>Decision of the judges will be final</strong>.</br></br>
-
-
-                    <!--<ul class="list-inline">
-                      <li style ="font-size:120%;"><strong>Head</strong>: Aditya Vikram Srivastava</li>
-                      <li style ="font-size:120%;"><strong>For any queries mail</strong>:Enigma@iiitb.org</li>
-                    </ul>-->
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Back</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Portfolio Modal 2 -->
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -622,6 +574,26 @@ c. Relevance</br></br>
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Through the lens !</h2>
+                    <% @is_true=0 %>
+                    <% @a.each do |reg| %>
+                      <% if reg==2 %>
+                        <% @is_true=1 %>
+                      <% end %>
+                    <% end %>
+                    <% if @is_true==0 %>
+                      <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <p>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        </p>
+                        <input hidden name="eid" value= "2">
+                        <input hidden name="usid" value= "<%= @user.id %>">
+                        <p>
+                            <input type="submit" value="Register for this">
+                        </p>
+                    </form>
+                    <% else %>
+                      <p><h6> Already registered </h6></p>
+                    <% end %>
                     <p class="item-intro" style ="font-size:120%;">“Photography for me is not looking, it’s feeling. If you can’t feel what you’re looking at, then you’re never going to get others to feel anything when they look at your pictures.”
 ~Don McCullum
 </p>
@@ -657,6 +629,75 @@ Taking pictures is savouring life intensely, every hundredth of a second. Life g
             </div>
           </div>
         </div>
+
+        <!-- Portfolio Modal 1 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>Larynx Debate!</h2>
+                    <% @is_true=0 %>
+                    <% @a.each do |reg| %>
+                      <% if reg==1 %>
+                        <% @is_true=1 %>
+                      <% end %>
+                    <% end %>
+                    <% if @is_true==0 %>
+                      <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <p>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        </p>
+                        <input hidden name="eid" value= "1">
+                        <input hidden name="usid" value= "<%= @user.id %>">
+                        <p>
+                            <input type="submit" value="Register for this">
+                        </p>
+                    </form>
+                    <% else %>
+                      <p><h6> Already registered </h6></p>
+                    <% end %>
+                    <p class="item-intro">Brought to you by cite, a club of IIIT-B.</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/01-preview.jpg" alt="">
+                    <p style ="font-size:140%;">For those who don't merely speak but, assert. For those who don't just carry an opinion but, stamp it. For those who don't just have a say but, deliver the verdict. If you have the gift of the gab, we present before you a stage and a worthy opponent. Be warned. The competition is fierce, and the stakes high. String together articulate words and deftness of the rational mind, and victory is yours. Fail to do so, and you are the pawn in the game.</br></br></br><strong><u>RULES</u></strong></br></p>
+                    <p align="left" style ="font-size:120%;">
+                      1. There is no registration fee.</br></br>
+2. The registrations will be closed once the event is in action.</br></br>
+3. The language of the debate will be English.</br></br>
+4. Each team will have 2 members.</br></br>
+5. One speaker will speak for the motion <strong>(4 Minutes)</strong> and the other will speak against the motion <strong>(4 minutes)</strong>. There will be a warning bell after 3 ½ minutes.</br></br>
+6. There will be three rounds. The first round would be a qualifiers round. The qualifying teams will be going forward to the second round and so on.</br></br>
+7. First two rounds have the same set of rules, just that the topic for the second round would be <strong>announced on the spot</strong> (Don’t worry though, you’ll have 10 minutes to prepare for this round!). The last round will be held on the last day of the event.</br></br>
+8. <strong>There will not be any cross-rebuttal rounds</strong>.</br></br>
+9. <strong>Negative marks</strong> shall be awarded for exceeding the time limit.</br></br>
+10. No expression shall be entertained which is offensive, personal or defamatory in nature, use of which shall lead to <strong>elimination</strong>.</br></br>
+11. The participating teams will be judged on the following criterions:</br>
+a. Attitude</br>
+b. Fluency</br>
+c. Relevance</br></br>
+12. <strong>Decision of the judges will be final</strong>.</br></br>
+
+
+                    <!--<ul class="list-inline">
+                      <li style ="font-size:120%;"><strong>Head</strong>: Aditya Vikram Srivastava</li>
+                      <li style ="font-size:120%;"><strong>For any queries mail</strong>:Enigma@iiitb.org</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Modal 2 -->
+
         <!-- Portfolio Modal 3 -->
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-content">
@@ -671,7 +712,27 @@ Taking pictures is savouring life intensely, every hundredth of a second. Life g
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>La la la capella</h2>
-                    <p class="item-intro" style ="font-size: 120%;">"Life is one grand, sweet song, so start the music. Music is life, that's why heart "beats""
+                    <% @is_true=0 %>
+                    <% @a.each do |reg| %>
+                      <% if reg==3 %>
+                        <% @is_true=1 %>
+                      <% end %>
+                    <% end %>
+                    <% if @is_true==0 %>
+                      <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <p>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        </p>
+                        <input hidden name="eid" value= "3">
+                        <input hidden name="usid" value= "<%= @user.id %>">
+                        <p>
+                            <input type="submit" value="Register for this">
+                        </p>
+                    </form>
+                    <% else %>
+                      <p> Already registered </p>
+                    <% end %>
+                     <p class="item-intro" style ="font-size: 120%;">"Life is one grand, sweet song, so start the music. Music is life, that's why heart "beats""
 </p>
                     <img class="img-responsive img-centered" src="/img/portfolio/03-preview.jpg" alt="">
                     <p style =" font-size:140%;">
@@ -702,6 +763,26 @@ Taking pictures is savouring life intensely, every hundredth of a second. Life g
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>La la la capella</h2>
+                    <% is_true=0 %>
+                    <% @a.each do |reg| %>
+                      <% if reg==3 %>
+                        <% is_true=1 %>
+                      <% end %>
+                    <% end %>
+                    <% if is_true==0 %>
+                      <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <p>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        </p>
+                        <input hidden name="eid" value= "3">
+                        <input hidden name="usid" value= "<%= @user.id %>">
+                        <p>
+                            <input type="submit" value="Register for this">
+                        </p>
+                    </form>
+                    <% else %>
+                      <p><h6> Already registered </h6></p>
+                    <% end %>
                     <p class="item-intro" style ="font-size: 120%;">"Life is one grand, sweet song, so start the music. Music is life, that's why heart "beats""
 </p>
                     <img class="img-responsive img-centered" src="/img/portfolio/03-preview.jpg" alt="">
@@ -733,6 +814,26 @@ Taking pictures is savouring life intensely, every hundredth of a second. Life g
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Rythm</h2>
+                    <% @is_true=0 %>
+                    <% @a.each do |reg| %>
+                      <% if reg==4 %>
+                        <% @is_true=1 %>
+                      <% end %>
+                    <% end %>
+                    <% if @is_true==0 %>
+                      <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <p>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        </p>
+                        <input hidden name="eid" value= "4">
+                        <input hidden name="usid" value= "<%= @user.id %>">
+                        <p>
+                            <input type="submit" value="Register for this">
+                        </p>
+                    </form>
+                    <% else %>
+                      <p><h6> Already registered </h6></p>
+                    <% end %>
                     <!--<p class="item-intro">Lorem ipsum dolor sit amet consectetur.</p>-->
                     <img class="img-responsive img-centered" src="/img/portfolio/05-preview.jpg" alt="">
                     <p style =" font-size:140%;"><strong>Hey Jude!</strong> Playing music in front of a big crowd is not for the faint hearted. So if you feel like <strong>We Will Rock You</strong>, then get your band, whip out your music and let the crowd go <strong>Numb</strong> because this is the <strong>Carnival Of Rust</strong> and <strong>Nothing Else Matters.</strong> Only the winner gets the <strong>Stairway To Heaven</strong> and to get there, you need to play some of the best music of your life. You may sing <strong>Despacito</strong> or you may be a <strong>Rap God</strong> but <strong>In The End,</strong> all that we care for is good music and some passionate musicians belting it out. If you don’t want to be <strong>Another Brick In The Wall</strong> do get your own instruments to play with because <strong>The Show Must Go On.</strong></p>
@@ -761,6 +862,26 @@ Taking pictures is savouring life intensely, every hundredth of a second. Life g
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Time to Run</h2>
+                    <% @is_true=0 %>
+                    <% @a.each do |reg| %>
+                      <% if reg==5 %>
+                        <% @is_true=1 %>
+                      <% end %>
+                    <% end %>
+                    <% if @is_true==0 %>
+                      <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <p>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        </p>
+                        <input hidden name="eid" value= "5">
+                        <input hidden name="usid" value= "<%= @user.id %>">
+                        <p>
+                            <input type="submit" value="Register for this">
+                        </p>
+                    </form>
+                    <% else %>
+                      <p><h6> Already registered </h6></p>
+                    <% end %>
                     <p class="item-intro">-Brought to you by CP club of iiitb.</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/06-preview.jpg" alt="">
                     <p style =" font-size:140%;">While most people balk when asked to code, some of you secretly stay up nights in front of the screen gazing at the long lines of code working their magic. And this means you are a passionate coder. And if you are indeed passionate, what is stopping you from fighting it out against some of the best coders? Join us in a fun filled competitive programming event and compete against some very good coders for a few rounds on Codeforces and see who emerges victorious. It’s that easy!! (maybe not for you!)</p>
@@ -789,6 +910,26 @@ Taking pictures is savouring life intensely, every hundredth of a second. Life g
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Whip and nae nae!</h2>
+                    <% @is_true=0 %>
+                    <% @a.each do |reg| %>
+                      <% if reg==6 %>
+                        <% @is_true=1 %>
+                      <% end %>
+                    <% end %>
+                    <% if @is_true==0 %>
+                      <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <p>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        </p>
+                        <input hidden name="eid" value= "6">
+                        <input hidden name="usid" value= "<%= @user.id %>">
+                        <p>
+                            <input type="submit" value="Register for this">
+                        </p>
+                    </form>
+                    <% else %>
+                      <p><h6> Already registered </h6></p>
+                    <% end %>
                     <p class="item-intro">Lorem ipsum dolor sit amet consectetur.</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/07-preview.jpg" alt="">
                     <p style =" font-size:140%;">Lorem ipsum dolor sit amet, sea essent iisque iudicabit te, pro no justo delicata inimicus, et oblique docendi laboramus eum. Ei minim fabulas pertinacia pro, graeco urbanitas reformidans quo id. Error congue tacimates ei vis, facer facete ius cu, audiam prodesset pri ut. Id semper fuisset vel, has dolorum menandri eu.</p>
@@ -817,6 +958,26 @@ Taking pictures is savouring life intensely, every hundredth of a second. Life g
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Shipwreck!</h2>
+                    <% @is_true=0 %>
+                    <% @a.each do |reg| %>
+                      <% if reg==7 %>
+                        <% @is_true=1 %>
+                      <% end %>
+                    <% end %>
+                    <% if @is_true==0 %>
+                      <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <p>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        </p>
+                        <input hidden name="eid" value= "7">
+                        <input hidden name="usid" value= "<%= @user.id %>">
+                        <p>
+                            <input type="submit" value="Register for this">
+                        </p>
+                    </form>
+                    <% else %>
+                      <p><h6> Already registered </h6></p>
+                    <% end %>
                     <p class="item-intro">Lorem ipsum dolor sit amet consectetur.</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
                     <p style =" font-size:140%;">You are on Titanic sailing across Atlantic. But the "unsinkable" ship, the largest, most luxurious ocean liner of its time, crashed into an iceberg on its maiden voyage. You are a renowned celebrity stuck in a sinking ship. Sadly, there are only 2 life-jackets  of which one belongs to the captain of course. One  remaining  life-jacket  will  be  given  to  the  person  whose  life  is  most  important  to  the world. Justify why YOU must get a chance to outlive thousands of people on the ship. Explain why does the world need you? Can you explain your purpose of life? Earn the life-jacket and you earn our respect! </br></br></br><strong><u>RULES</u></strong></br></p>
@@ -849,6 +1010,26 @@ who is saved.</p>
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>League Of Fanatics!</h2>
+                    <% @is_true=0 %>
+                    <% @a.each do |reg| %>
+                      <% if reg==8 %>
+                        <% @is_true=1 %>
+                      <% end %>
+                    <% end %>
+                    <% if @is_true==0 %>
+                      <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <p>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        </p>
+                        <input hidden name="eid" value= "8">
+                        <input hidden name="usid" value= "<%= @user.id %>">
+                        <p>
+                            <input type="submit" value="Register for this">
+                        </p>
+                    </form>
+                    <% else %>
+                      <p><h6> Already registered </h6></p>
+                    <% end %>
                     <p class="item-intro">-Brought to you by comic club of iiitb.</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
                     <p style =" font-size:140%;"> Start re-watching your anime and TV shows, cuz League of Fanatics is here! For all you nerds out there who have been told that your hours (or days) of binging is never productive.... well, now it is! Want to test your knowledge and put all of your hard work to use? Well then, League of Fanatics @Infin8 is just the thing for you! Each team can have 3-4 people, so make sure you get the right guys for the job! There will be a screening round out of which the top 8 teams will be selected for the main event, which will consist of different interactive rounds that will put your knowledge and acumen to the test. Cool prizes await the winners, so don’t hold back! Oh yeah, don’t forget to come up with a cool team name too! Get binging!</p><!-- </br></br></br><strong><u>RULES</u></strong></br></p>
@@ -881,6 +1062,26 @@ who is saved.</p>-->
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>The Inquisitive Mind</h2>
+                    <% @is_true=0 %>
+                    <% @a.each do |reg| %>
+                      <% if reg==9 %>
+                        <% @is_true=1 %>
+                      <% end %>
+                    <% end %>
+                    <% if @is_true==0 %>
+                      <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <p>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        </p>
+                        <input hidden name="eid" value= "9">
+                        <input hidden name="usid" value= "<%= @user.id %>">
+                        <p>
+                            <input type="submit" value="Register for this">
+                        </p>
+                    </form>
+                    <% else %>
+                      <p><h6> Already registered </h6></p>
+                    <% end %>
                     <p class="item-intro">- brought to you by Literary Arts club of iiitb.</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
                     <p style =" font-size:140%;">Literary art is the integrative discipline of appreciation and creative writing. At Infin8, we’re curious to delve into your mind, on how you see this beautiful world through our eyes and how well you communicate it to other people’s minds. The gist is simple. You’ll be shown a picture, anything from a meme template to an ice-cream, and you have to express your thoughts on how you visualize it, in the most creative way possible. </br></br></br><strong><u>RULES</u></strong></br></p>
@@ -911,6 +1112,26 @@ who is saved.</p>-->
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <h2>Trick or Treat!</h2>
+                    <% @is_true=0 %>
+                    <% @a.each do |reg| %>
+                      <% if reg==10 %>
+                        <% @is_true=1 %>
+                      <% end %>
+                    <% end %>
+                    <% if @is_true==0 %>
+                      <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <p>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        </p>
+                        <input hidden name="eid" value= "10">
+                        <input hidden name="usid" value= "<%= @user.id %>">
+                        <p>
+                            <input type="submit" value="Register for this">
+                        </p>
+                    </form>
+                    <% else %>
+                      <p><h6> Already registered </h6></p>
+                    <% end %>
                     <p class="item-intro">"I dream my painting and I paint my dreams."</p>
                     <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
                     <p style =" font-size:140%;"><strong>3-D Painting!</strong> Doesn't that seem interesting? Participate and deceit us to conquer...</br>Paint your 3-D ideas on a 2-D sheet. Paint your imaginations using your own brushes and colors.</br>And be ready for <strong>Battle of the Brush.</strong> </br></p><!--</br></br><strong><u>RULES</u></strong></br></p>

@@ -13,10 +13,8 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :reg_user_id %>
-  </div>
+  
+  <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @usid %>">
 
   <!-- <div class="field"> -->
     <!-- <%= form.label :event_id %> -->
