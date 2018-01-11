@@ -7,6 +7,7 @@ class FrontendController<ApplicationController
     # print "SUPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"
       i=0
       Reg.where(:user_id=>@user.id).each do |reg|
+      
         @a[i]=reg.event_id
         print @a[i]
         i+=1

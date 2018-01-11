@@ -29,6 +29,7 @@ class RegsController < ApplicationController
     @reg = Reg.new
     @eid=params[:eid]
     @usid=params[:usid]
+    @eve=Event.find(@eid)
 
   end
 

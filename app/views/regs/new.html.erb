@@ -20,11 +20,15 @@
     <!-- <%= form.label :event_id %> -->
     <input hidden id="reg_event_id" name="reg[event_id]" value="<%= @eid %>">
   <!-- </div> -->
-
+<% if @eve.is_team==true %>
   <div class="field">
     <%= form.label :team_name %>
     <%= form.text_field :team_name, id: :reg_team_name %>
   </div>
+
+<% else %>
+  <input hidden id="reg_team_name" name="reg[team_name]" value=null>
+<% end %>
 
   <div class="actions">
     <%= form.submit %>
