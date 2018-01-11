@@ -1,38 +1,75 @@
 <h1>New Reg</h1>
 
-<%= form_with(model: @reg, local: true) do |form| %>
-  <% if @reg.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@reg.errors.count, "error") %> prohibited this @reg from being saved:</h2>
+<script>
+  function onload() {
 
-      <ul>
-      <% @reg.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  }
+</script>
 
-
-  <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @usid %>">
-
-  <!-- <div class="field"> -->
-    <!-- <%= form.label :event_id %> -->
-    <input hidden id="reg_event_id" name="reg[event_id]" value="<%= @eid %>">
-  <!-- </div> -->
 <% if @eve.is_team==true %>
-  <div class="field">
-    <%= form.label :team_name %>
-    <%= form.text_field :team_name, id: :reg_team_name %>
-  </div>
+  <%= form_with(model: @reg, local: true) do |form| %>
+    <% if @reg.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@reg.errors.count, "error") %> prohibited this reg from being saved:</h2>
+
+        <ul>
+        <% @reg.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+    <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @usid %>">
+
+    <!-- <div class="field"> -->
+      <!-- <%= form.label :event_id %> -->
+      <input hidden id="reg_event_id" name="reg[event_id]" value="<%= @eid %>">
+    <!-- </div> -->
+
+    <div class="field">
+      <%= form.label :team_name %>
+      <%= form.text_field :team_name, id: :reg_team_name %>
+    </div>
+
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+
+    <%= link_to 'Back', root_path%>
+    <% end %>
+
 
 <% else %>
-  <input hidden id="reg_team_name" name="reg[team_name]" value=null>
-<% end %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+  <%= form_with(model: @reg, local: true) do |form| %>
+    <% if @reg.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@reg.errors.count, "error") %> prohibited this reg from being saved:</h2>
 
-<%= link_to 'Back', root_path%>
+        <ul>
+        <% @reg.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+    <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @usid %>">
+
+    <!-- <div class="field"> -->
+      <!-- <%= form.label :event_id %> -->
+      <input hidden id="reg_event_id" name="reg[event_id]" value="<%= @eid %>">
+    <!-- </div> -->
+    <input hidden id="reg_team_name" name="reg[team_name]" value=null>
+
+    <div class="actions">
+      <%= form.submit "Click here to register" %>
+    </div>
+
+    <% end %>
+
+<% end %>
