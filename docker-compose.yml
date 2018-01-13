@@ -20,6 +20,9 @@ services:
     image: postgres:latest
     environment:
       - POSTGRES_PASSWORD=thanks123
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
   proxy:
     image: jwilder/nginx-proxy
     restart: always
@@ -30,3 +33,6 @@ services:
     ports:
       - "80:80"
     container_name: proxy
+volumes: 
+  dbdata:
+# run "docker create volume dbdata"
