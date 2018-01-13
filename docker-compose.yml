@@ -1,0 +1,32 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: abreview:latest
+    ports:
+      - "3001:3000"
+    dns: "8.8.8.8"
+    volumes:
+      - ".:/app"
+    env_file: .env
+    restart: always
+    links:
+      - db:db
+      # In production instead add external_links for db
+    command: bash -c "bin/rake assets:precompile && bin/rake db:create && bin/rake db:migrate && bin/rails s"
+
+  # In production remove this and add an external link in web
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=thanks123
+  proxy:
+    image: jwilder/nginx-proxy
+    restart: always
+    depends_on:
+      - web
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    ports:
+      - "80:80"
+    container_name: proxy
