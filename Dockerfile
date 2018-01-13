@@ -3,7 +3,7 @@ FROM ruby:2.4
 RUN apt-get update -qq && apt-get install -y build-essential apt-transport-https apt-utils
 
 # for nokogiri
-RUN apt-get install -y libxml2-dev libxslt1-dev
+RUN apt-get install -y libxml2-dev libxslt1-dev libpq-dev
 
 # for a JS runtime
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
