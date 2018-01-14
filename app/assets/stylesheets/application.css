@@ -13,7 +13,7 @@
  *= require_tree .
 
  */
- @import 'bootstrap-sass-rails';
+ @import '_bootstrap';
  .main-header {
     background-repeat: no-repeat;
     background-position: center;
