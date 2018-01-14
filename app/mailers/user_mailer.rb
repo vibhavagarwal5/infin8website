@@ -5,4 +5,10 @@ class UserMailer < ApplicationMailer
     @query=query
     mail(to: 'no.reply.zense@gmail.com', subject: 'Query from ' + @name)
   end
+  def bulk_mail(user, subject, body)
+      @user=user
+      @subject=subject
+      @body=body
+      mail(to: @user.email, subject: @subject)
+  end
 end

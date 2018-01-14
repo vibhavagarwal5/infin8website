@@ -1,3 +1,39 @@
+module RailsAdmin
+    module Config
+        module Actions
+            class BulkMail < RailsAdmin::Config::Actions::Base
+                RailsAdmin::Config::Actions.register(self)
+                register_instance_option :collection do true end
+                register_instance_option :bulkable? do true end
+                register_instance_option :http_methods do [:get,:post] end
+                register_instance_option :link_icon do
+                    'icon-envelope'
+                end
+                register_instance_option :controller do
+                    proc do
+                        if (params[:subject].blank?)
+                            @objects=list_entries(@model_config, :post)
+                            render @action.template_name
+                        else
+                            @subject=params[:subject]
+                            @body=params[:body]
+                            @objects=JSON.parse(params[:bulk_ids])
+                            @objects=@objects.map { |e| User.find(e) }
+                            puts('asdadadsasdasdad')
+                            puts(@objects)
+                            @objects.each do |object|
+                                UserMailer.bulk_mail(object,@subject,@body).deliver
+                            end
+                            redirect_to back_or_index
+                            flash[:success] = "#{@model_config.label} successfully mailed."
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
 RailsAdmin.config do |config|
 
   ### Popular gems integration
@@ -35,7 +71,8 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
-
+    bulk_mail
+    
     ## With an audit adapter, you can add:
     # history_index
     # history_show

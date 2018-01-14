@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  admin:
+    actions:
+      bulk_mail:
+        title: 'Compose Mail'
+        menu: 'Mail everyone'
+        breadcrumb: 'Bulk mail'
+        bulk_link: 'Mail selected Users'
