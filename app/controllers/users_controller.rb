@@ -4,7 +4,13 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @user = current_user
+    @user = User.find params[:id]
+    unless current_user == @user
+        flash[:success]="You don't have access"
+        redirect_to root_path
+        return
+    end
+    @user=current_user
   end
 
   # GET /users/1

@@ -147,7 +147,7 @@
 							</ul
             >
               <% if user_signed_in? %>
-                <%= link_to @user.name ,users_url %>
+                <%= link_to @user.name ,edit_user_registration_url %>
                 <%= link_to "Log out", destroy_user_session_path, method: :delete %>
                 <% else %>
                 <%= link_to "Login/Register", new_user_session_path %>
@@ -279,139 +279,113 @@
 
 			<div class="project-wrapper portfolio-items">
 
-				<!--<figure class="mix work-item enigma">
-					<img src="/img/works/enigma.jpg" alt="">
-					<figcaption class="overlay">
-                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
-                          <h4>ENIGMA</h4>
-                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="Robotics Club">
-						<h4>Build a Bot !</h4>
-					</figcaption>
-				</figure>-->
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <figure class="mix work-item photo">
+    					<img src="/img/works/chhayachitra.png" alt="">
+    					<figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+    						<p>
+                                <h4>Through the lens!</h4>
+        						<h4>Chhayachitra!</h4>
+                            </p>
+    					</figcaption>
+    				</figure>
+                </a>
 
-                <figure class="mix work-item photo">
-					<img src="/img/works/chhayachitra.png" alt="">
-					<figcaption class="overlay">
-                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
-                          <h4>Through the lens!</h4>
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <figure class="mix work-item cite">
+                        <img src="/img/works/debate.jpg" alt="">
+                        <figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                            <h4>Larynx Debate!</h4>
+                          <p ><strong>Curate Ideas,Technology,Entertainment</strong></p>
+                          <h4>Cite.</h4>
+                        </figcaption>
+                    </figure>
+                </a>
 
-                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="Photography Club">
-						<h4>Chhayachitra!</h4>
-						<p></p>
-					</figcaption>
-				</figure>
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <figure class="mix work-item music">
+                        <img src="/img/works/capella.png" alt="">
+                        <figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                            <p>
+                                <h4>La la la capella</h4>
+                                <h4>Music club</h4>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </a>
 
-                <figure class="mix work-item cite">
-                    <img src="/img/works/debate.jpg" alt="">
-                    <figcaption class="overlay">
-                      <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
-                        <h4>Larynx Debate!</h4>
+                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <figure class="mix work-item music">
+                        <img src="/img/works/rythm.jpg" alt="">
+                        <figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                            <p>
+                                <h4>Rythm</h4>
+                                <h4>Music club</h4>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </a>
 
-                      <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
-                      <p ><strong>Curate Ideas,Technology,Entertainment</strong></p>
-                      <h4>Cite.</h4>
-                    </figcaption>
-                </figure>
+                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                    <figure class="mix work-item cp">
+                        <img src="/img/works/cp.jpg" alt="">
+                        <figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                            <p>
+                                <h4>Time to run</h4>
+                                <h4>Competitive Programming Club</h4>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </a>
 
-                <figure class="mix work-item music">
-                    <img src="/img/works/capella.png" alt="">
-                    <figcaption class="overlay">
-                        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
-                          <h4>La la la capella</h4>
-                          <!--Web Design-->
-                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
-                        <h4>Music club</h4>
-                        <!--/<p>Enigma</p>-->
-                    </figcaption>
-                </figure>
+                <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
+                    <figure class="mix work-item lsd">
+                        <img src="/img/works/ship.png" alt="">
+                        <figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                          <p>
+                            <h4>Shipwreck</h4>
+                            <h4>LSD</h4>
+                          </p>
+                        </figcaption>
+                    </figure>
+                </a>
 
-                <figure class="mix work-item music">
-                    <img src="/img/works/rythm.jpg" alt="">
-                    <figcaption class="overlay">
-                        <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
-                          <h4>Rythm</h4>
-                        <!--  Web Design-->
-                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
-                        <h4>Music club</h4>
-                        <!--<p>Music club</p>-->
-                    </figcaption>
-                </figure>
-
-                <figure class="mix work-item cp">
-                    <img src="/img/works/cp.jpg" alt="">
-                    <figcaption class="overlay">
-                        <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
-                          <h4>Time to run</h4>
-                          <!--Web Design-->
-                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
-                        <h4>Competitive Programming Club</h4>
-                      <!--  <p>Enigma</p>-->
-                    </figcaption>
-                </figure>
-
-                <figure class="mix work-item dance">
-                    <img src="/img/works/dance.jpg" alt="">
-                    <figcaption class="overlay">
-                        <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
-                          <h4>Whip and nae nae</h4>
-                          <!--Web Design-->
-                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
-                        <h4>Dance Club</h4>
-                        <!--<p>Enigma</p>-->
-                    </figcaption>
-                </figure>
-
-                <figure class="mix work-item lsd">
-                    <img src="/img/works/ship.png" alt="">
-                    <figcaption class="overlay">
-                        <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
-                          <h4>Shipwreck</h4>
-                        <!--  Web Design-->
-                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
-                        <h4>LSD</h4>
-                        <!--<p>Enigma</p>-->
-                    </figcaption>
-                </figure>
-
-        				<figure class="mix work-item lsd">
-        					<img src="/img/works/lof.jpg" alt="">
-        					<figcaption class="overlay">
-                                <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
-                                  <h4>League of Fanatics</h4>
-
-                                <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
+                <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
+    				<figure class="mix work-item lsd">
+    					<img src="/img/works/lof.jpg" alt="">
+    					<figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                            <p>
+                                <h4>League of Fanatics</h4>
         						<h4>LSD</h4>
-        						<!--<p>Larynx Debate!</p>-->
-        					</figcaption>
-        				</figure>
+                            </p>
+    					</figcaption>
+    				</figure>
+                </a>
 
-                <figure class="mix work-item lsd">
-                    <img src="/img/works/la.jpg" alt="">
-                    <figcaption class="overlay">
-                        <a href="#portfolioModal10" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
-                          <h4>The Inquisitive Mind</h4>
-                        <!--  Web Design-->
-                        <img src="/img/portfolio/01.jpg" class="img-responsive" alt="LSD">
-                        <h4>Literary Arts</h4>
-                      <!--  <p>LSD</p>-->
-                    </figcaption>
-                </figure>
+                <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
+                    <figure class="mix work-item lsd">
+                        <img src="/img/works/la.jpg" alt="">
+                        <figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                            <p>
+                                <h4>The Inquisitive Mind</h4>
+                              <h4>Literary Arts</h4>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </a>
 
-        				<figure class="mix work-item lsd">
-        					<img src="/img/works/tot.png" alt="">
-        					<figcaption class="overlay">
-                                <a href="#portfolioModal11" class="portfolio-link" data-toggle="modal"><i class="fa fa-eye fa-lg"></i></a>
-                                  <h4>Trick or Treat</h4>
-
-                                <img src="/img/portfolio/01.jpg" class="img-responsive" alt="">
+                <a href="#portfolioModal10" class="portfolio-link" data-toggle="modal">
+    				<figure class="mix work-item lsd">
+    					<img src="/img/works/tot.png" alt="">
+    					<figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                              <p>
+                                <h4>Trick or Treat</h4>
         						<h4>LSD</h4>
-        						<!--<p>Larynx Debate!</p>-->
-        					</figcaption>
-        				</figure>
-
-
+                              </p>
+    					</figcaption>
+    				</figure>
+                </a>
 			</div>
-
 
 		</section>
 
@@ -439,7 +413,7 @@
 										<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms">
 						<div class="member-thumb">
 							<img src="/img/team/member-1.png" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
+							<figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
 								<h5>Description of Sponsors</h5>
 								<p>Description of Sponsors</p>
 								<ul class="social-links text-center">
@@ -456,7 +430,7 @@
 										<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
 						<div class="member-thumb">
 							<img src="/img/team/member-2.png" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
+							<figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
 								<h5>Description of Sponsors </h5>
 								<p>Description of Sponsors</p>
 								<ul class="social-links text-center">
@@ -473,7 +447,7 @@
 										<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
 						<div class="member-thumb">
 							<img src="/img/team/member-3.png" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
+							<figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
 								<h5>Description of Sponsors </h5>
 								<p>Description of Sponsors</p>
 								<ul class="social-links text-center">
@@ -490,7 +464,7 @@
 										<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
 						<div class="member-thumb">
 							<img src="/img/team/member-1.png" alt="Team Member" class="img-responsive">
-							<figcaption class="overlay">
+							<figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
 								<h5>Description of Sponsors </h5>
 								<p>Description of Sponsors</p>
 								<ul class="social-links text-center">
@@ -589,14 +563,12 @@
                           <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
                           <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
                             <%if Event.find(@eventId).is_team %>
-                              <label> team name </label>
+                              <label>Team Name:</label>
                               <input id="reg_team_name" name="reg[team_name]">
                             <%else%>
                                 <input id="reg_team_name" name="reg[team_name]" hidden value=null>
                             <%end%>
-                          <p>
-                              <input type="submit" value="Register for this">
-                          </p>
+                            <input type="submit" value="Register for this">
                       </form>
                       <% else %>
                         <p><h6> Already registered </h6></p>
@@ -671,14 +643,12 @@ Taking pictures is savouring life intensely, every hundredth of a second. Life g
                           <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
                           <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
                             <%if Event.find(@eventId).is_team %>
-                              <label> team name </label>
+                              <label>Team Name:</label>
                               <input id="reg_team_name" name="reg[team_name]">
                             <%else%>
                                 <input id="reg_team_name" name="reg[team_name]" hidden value=null>
                             <%end%>
-                          <p>
-                              <input type="submit" value="Register for this">
-                          </p>
+                            <input type="submit" value="Register for this">
                       </form>
                       <% else %>
                         <p><h6> Already registered </h6></p>
@@ -751,14 +721,12 @@ c. Relevance</br></br>
                           <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
                           <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
                             <%if Event.find(@eventId).is_team %>
-                              <label> team name </label>
+                              <label>Team Name:</label>
                               <input id="reg_team_name" name="reg[team_name]">
                             <%else%>
                                 <input id="reg_team_name" name="reg[team_name]" hidden value=null>
                             <%end%>
-                          <p>
-                              <input type="submit" value="Register for this">
-                          </p>
+                            <input type="submit" value="Register for this">
                       </form>
                       <% else %>
                         <p><h6> Already registered </h6></p>
@@ -768,68 +736,6 @@ c. Relevance</br></br>
                     <% end %>
 
                      <p class="item-intro" style ="font-size: 120%;">"Life is one grand, sweet song, so start the music. Music is life, that's why heart "beats""
-</p>
-                    <img class="img-responsive img-centered" src="/img/portfolio/03-preview.jpg" alt="">
-                    <p style =" font-size:140%;">
-                    <p>Do tap your feet in sync with the beats and words gush out in a poetic tone? For the one who sings knows not no boundaries but only the joy of expression. Nothing is more satisfying than singing your heart out loud. So, let your voice transcend all the boundaries, sing like you have only today to express yourself and get ready to bind the audience to their seats.
-</p>
-                  <!--  <ul class="list-inline">
-                      <li><strong>Client</strong>: John Doe</li>
-                      <li><strong>Category</strong>: Web Design</li>
-                    </ul>-->
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Portfolio Modal 4 -->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"> </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                  <div class="modal-body">
-                    <!-- Project Details Go Here -->
-                    <h2>La la la capella</h2>
-                    <% if user_signed_in? %>
-                      <% @is_true=0 %>
-                      <% @eventId=3 %>
-                      <% @a.each do |reg| %>
-                        <% if reg==@eventId %>
-                          <% @is_true=1 %>
-                        <% end %>
-                      <% end %>
-                      <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs">
-                          <p>
-                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                          </p>
-                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
-                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
-                            <%if Event.find(@eventId).is_team %>
-                              <label> team name </label>
-                              <input id="reg_team_name" name="reg[team_name]">
-                            <%else%>
-                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
-                            <%end%>
-                          <p>
-                              <input type="submit" value="Register for this">
-                          </p>
-                      </form>
-                      <% else %>
-                        <p><h6> Already registered </h6></p>
-                      <% end %>
-                    <% else %>
-                      <p><h6><%= link_to "Login to register", new_user_session_path %></h6><p>
-                    <% end %>
-                    <p class="item-intro" style ="font-size: 120%;">"Life is one grand, sweet song, so start the music. Music is life, that's why heart "beats""
 </p>
                     <img class="img-responsive img-centered" src="/img/portfolio/03-preview.jpg" alt="">
                     <p style =" font-size:140%;">
@@ -876,14 +782,12 @@ c. Relevance</br></br>
                           <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
                           <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
                             <%if Event.find(@eventId).is_team %>
-                              <label> team name </label>
+                              <label>Team Name:</label>
                               <input id="reg_team_name" name="reg[team_name]">
                             <%else%>
                                 <input id="reg_team_name" name="reg[team_name]" hidden value=null>
                             <%end%>
-                          <p>
-                              <input type="submit" value="Register for this">
-                          </p>
+                            <input type="submit" value="Register for this">
                       </form>
                       <% else %>
                         <p><h6> Already registered </h6></p>
@@ -935,14 +839,12 @@ c. Relevance</br></br>
                           <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
                           <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
                             <%if Event.find(@eventId).is_team %>
-                              <label> team name </label>
+                              <label>Team Name:</label>
                               <input id="reg_team_name" name="reg[team_name]">
                             <%else%>
                                 <input id="reg_team_name" name="reg[team_name]" hidden value=null>
                             <%end%>
-                          <p>
-                              <input type="submit" value="Register for this">
-                          </p>
+                            <input type="submit" value="Register for this">
                       </form>
                       <% else %>
                         <p><h6> Already registered </h6></p>
@@ -964,7 +866,8 @@ c. Relevance</br></br>
             </div>
           </div>
         </div>
-        <!-- Portfolio Modal 7 -->
+
+        <!-- Portfolio Modal 8 -->
         <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -977,7 +880,7 @@ c. Relevance</br></br>
                 <div class="col-lg-8 col-lg-offset-2">
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
-                    <h2>Whip and nae nae!</h2>
+                    <h2>Shipwreck!</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
                       <% @eventId=6 %>
@@ -994,73 +897,12 @@ c. Relevance</br></br>
                           <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
                           <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
                             <%if Event.find(@eventId).is_team %>
-                              <label> team name </label>
+                              <label>Team Name:</label>
                               <input id="reg_team_name" name="reg[team_name]">
                             <%else%>
                                 <input id="reg_team_name" name="reg[team_name]" hidden value=null>
                             <%end%>
-                          <p>
-                              <input type="submit" value="Register for this">
-                          </p>
-                      </form>
-                      <% else %>
-                        <p><h6> Already registered </h6></p>
-                      <% end %>
-                    <% else %>
-                      <p><h6><%= link_to "Login to register", new_user_session_path %></h6><p>
-                    <% end %>
-                    <p class="item-intro">Lorem ipsum dolor sit amet consectetur.</p>
-                    <img class="img-responsive img-centered" src="/img/portfolio/07-preview.jpg" alt="">
-                    <p style =" font-size:140%;">Lorem ipsum dolor sit amet, sea essent iisque iudicabit te, pro no justo delicata inimicus, et oblique docendi laboramus eum. Ei minim fabulas pertinacia pro, graeco urbanitas reformidans quo id. Error congue tacimates ei vis, facer facete ius cu, audiam prodesset pri ut. Id semper fuisset vel, has dolorum menandri eu.</p>
-                    <ul class="list-inline">
-                      <li><strong>Client</strong>: John Doe</li>
-                      <li><strong>Category</strong>: Web Design</li>
-                    </ul>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Portfolio Modal 8 -->
-        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"> </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                  <div class="modal-body">
-                    <!-- Project Details Go Here -->
-                    <h2>Shipwreck!</h2>
-                    <% if user_signed_in? %>
-                      <% @is_true=0 %>
-                      <% @eventId=7 %>
-                      <% @a.each do |reg| %>
-                        <% if reg==@eventId %>
-                          <% @is_true=1 %>
-                        <% end %>
-                      <% end %>
-                      <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs">
-                          <p>
-                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                          </p>
-                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
-                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
-                            <%if Event.find(@eventId).is_team %>
-                              <label> team name </label>
-                              <input id="reg_team_name" name="reg[team_name]">
-                            <%else%>
-                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
-                            <%end%>
-                          <p>
-                              <input type="submit" value="Register for this">
-                          </p>
+                            <input type="submit" value="Register for this">
                       </form>
                       <% else %>
                         <p><h6> Already registered </h6></p>
@@ -1088,7 +930,7 @@ who is saved.</p>
         </div>
 
         <!-- Portfolio Modal 9 -->
-        <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
               <div class="lr">
@@ -1103,7 +945,7 @@ who is saved.</p>
                     <h2>League Of Fanatics!</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
-                      <% @eventId=8 %>
+                      <% @eventId=7 %>
                       <% @a.each do |reg| %>
                         <% if reg==@eventId %>
                           <% @is_true=1 %>
@@ -1117,14 +959,12 @@ who is saved.</p>
                           <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
                           <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
                             <%if Event.find(@eventId).is_team %>
-                              <label> team name </label>
+                              <label>Team Name:</label>
                               <input id="reg_team_name" name="reg[team_name]">
                             <%else%>
                                 <input id="reg_team_name" name="reg[team_name]" hidden value=null>
                             <%end%>
-                          <p>
-                              <input type="submit" value="Register for this">
-                          </p>
+                            <input type="submit" value="Register for this">
                       </form>
                       <% else %>
                         <p><h6> Already registered </h6></p>
@@ -1152,7 +992,7 @@ who is saved.</p>-->
         </div>
 
         <!-- Portfolio Modal 10 -->
-        <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
               <div class="lr">
@@ -1167,7 +1007,7 @@ who is saved.</p>-->
                     <h2>The Inquisitive Mind</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
-                      <% @eventId=9 %>
+                      <% @eventId=8 %>
                       <% @a.each do |reg| %>
                         <% if reg==@eventId %>
                           <% @is_true=1 %>
@@ -1181,14 +1021,12 @@ who is saved.</p>-->
                           <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
                           <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
                             <%if Event.find(@eventId).is_team %>
-                              <label> team name </label>
+                              <label>Team Name:</label>
                               <input id="reg_team_name" name="reg[team_name]">
                             <%else%>
                                 <input id="reg_team_name" name="reg[team_name]" hidden value=null>
                             <%end%>
-                          <p>
-                              <input type="submit" value="Register for this">
-                          </p>
+                            <input type="submit" value="Register for this">
                       </form>
                       <% else %>
                         <p><h6> Already registered </h6></p>
@@ -1214,7 +1052,7 @@ who is saved.</p>-->
         </div>
 
         <!-- Portfolio Modal 11 -->
-        <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
               <div class="lr">
@@ -1229,7 +1067,7 @@ who is saved.</p>-->
                     <h2>Trick or Treat!</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
-                      <% @eventId=10 %>
+                      <% @eventId=9 %>
                       <% @a.each do |reg| %>
                         <% if reg==@eventId %>
                           <% @is_true=1 %>
@@ -1243,14 +1081,12 @@ who is saved.</p>-->
                           <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
                           <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
                             <%if Event.find(@eventId).is_team %>
-                              <label> team name </label>
+                              <label>Team Name:</label>
                               <input id="reg_team_name" name="reg[team_name]">
                             <%else%>
                                 <input id="reg_team_name" name="reg[team_name]" hidden value=null>
                             <%end%>
-                          <p>
-                              <input type="submit" value="Register for this">
-                          </p>
+                            <input type="submit" value="Register for this">
                       </form>
                       <% else %>
                         <p><h6> Already registered </h6></p>
@@ -1422,7 +1258,7 @@ who is saved.</p>-->
 
         <script>
         <% if flash[:success] %>
-        alert('<%= flash[:success] %>');
+            alert('<%= flash[:success] %>');
         <% end %>
         </script>
 		<!-- Essential jQuery Plugins
