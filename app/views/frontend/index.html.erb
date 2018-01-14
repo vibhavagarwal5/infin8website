@@ -150,7 +150,9 @@
                 <%= link_to @user.name ,edit_user_registration_url %>
                 <%= link_to "Log out", destroy_user_session_path, method: :delete %>
                 <% else %>
-                <%= link_to "Login/Register", new_user_session_path %>
+                <h4></br>
+                  <span class="label label-info"><%= link_to "Login Or Register", new_user_session_path %></span>
+              </h4>
                 <% end %>
 
               <!-- <li><a href="/users/sign_in">Login/Register</a></li> -->
