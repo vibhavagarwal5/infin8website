@@ -1,13 +1,20 @@
+<div class="border-form-div" style="border-color:#000;background-color:#edeff2">
+
 <p id="notice"><%= notice %></p>
-<ul class="hmenu">
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-  </li>
+    <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+
+<h1>About</h1>
+
+<div class="panel panel-default">
+<div class="panel-body">A Basic Panel</div>
+<span class="label label-default">Default Label</span>
+</div>
+<ul class="list-group">
+  <li class="list-group-item">First item</li>
+  <li class="list-group-item">Second item</li>
+  <li class="list-group-item">Third item</li>
 </ul>
-
-<h1>Users</h1>
-
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th colspan="3"></th>
@@ -36,9 +43,9 @@
       <tr>
         <td><%= link_to 'Edit', edit_user_registration_url(@user) %></td>
         <!-- <td><%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
+      <!-- </tr>
 
   </tbody>
-</table>
-
-<br>
+</table> -->
+<%= link_to 'Edit', edit_user_registration_url(@user) %>
+</div>
