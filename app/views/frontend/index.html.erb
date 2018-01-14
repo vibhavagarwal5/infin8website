@@ -1260,6 +1260,9 @@ who is saved.</p>-->
         <% if flash[:success] %>
             alert('<%= flash[:success] %>');
         <% end %>
+        <% if flash[:notice] %>
+            alert('<%= flash[:notice] %>');
+        <% end %>
         </script>
 		<!-- Essential jQuery Plugins
 		================================================== -->
