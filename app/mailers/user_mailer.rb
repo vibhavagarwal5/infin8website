@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
     @name=name
     @mail=mail
     @query=query
-    mail(to: 'infin8-2018@iiitb.org', subject: 'Query from ' + @name, cc: 'vishesh.ruparelia@iiitb.org')
+    mail(to: 'lakshay.infin8@iiitb.org', subject: 'Query from ' + @name, cc: 'vishesh.ruparelia@iiitb.org')
   end
   def bulk_mail(user, subject, body)
       @user=user
