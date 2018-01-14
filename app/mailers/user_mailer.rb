@@ -3,6 +3,6 @@ class UserMailer < ApplicationMailer
     @name=name
     @mail=mail
     @query=query
-    mail(to: 'vishesh.ruparelia@iiitb.org', subject: 'Query from ' + @name)
+    mail(to: 'no.reply.zense@gmail.com', subject: 'Query from ' + @name)
   end
 end
