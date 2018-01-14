@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+<ul class="hmenu">
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+  </li>
+</ul>
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+
+  <p>
+    <strong>College:</strong>
+    <%= @user.college %>
+  </p>
+
+  <p>
+    <strong>Contact:</strong>
+    <%= @user.contact %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+  <tbody>
+      <tr>
+        <td><%= link_to 'Edit', edit_user_registration_url(@user) %></td>
+        <!-- <td><%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+
+  </tbody>
+</table>
+
+<br>
