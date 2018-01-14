@@ -19,7 +19,9 @@ class FrontendController<ApplicationController
     @name=params[:name]
     @email=params[:email]
     @message=params[:message]
+    flash[:notice]='We have recorded your response, we will get back to you later!'
     UserMailer.query_mail(@name,@email,@message).deliver
+    redirect_to root_path
   end
 
 end
