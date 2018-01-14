@@ -147,8 +147,10 @@
 							</ul
             >
               <% if user_signed_in? %>
-                <%= link_to @user.name ,edit_user_registration_url %>
-                <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+              <h4>
+                <span class="label label-info"><%= link_to @user.name ,edit_user_registration_url %></span>
+                <span class="label label-info" ><%= link_to "Log out", destroy_user_session_path, method: :delete %></span>
+              </h4>
                 <% else %>
                 <h4></br>
                   <span class="label label-info"><%= link_to "Login Or Register", new_user_session_path %></span>
