@@ -9,10 +9,19 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *= require twitter/bootstrap
  *= require_self
  *= require_tree .
+
  */
+ @import 'bootstrap';
+ .main-header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(/img/banner.jpg);
+    width: 100%;
+    height: 100%;
+}
  .border-form-div {
   max-width: 300px;
   padding: 19px 29px 29px;
