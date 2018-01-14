@@ -91,11 +91,16 @@
                         <li><a href="#works" role="navigation">Events</a></li>
                         <li><a href="#contact" role="navigation">Locate Us</a></li>
                         <li><a href="#footer" role="navigation">Contact Us</a></li>
-                      <!---  <li><a href="#footer">Contact Us</a></li>-->
+                      <!--  <li><a href="#footer">Contact Us</a></li>-->
                       <!-- <li><%= link_to 'Login/Register', new_user_session_url %></li> -->
-                      <li><a href="/users/sign_in">Login/Register</a></li>
+                      <!-- <li><a href="/users/sign_in">Login/Register</a></li> -->
+                      <!-- <% if user_signed_in? %>
+                        <li><%= link_to @user.name ,users_url %></li>
+                        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+                        <% else %>
+                        <li><%= link_to "Login/Register", new_user_session_path %></li>
+                        <% end %> -->
                     </ul>
-
                 </nav>
 
 				<!-- /main nav -->
@@ -571,18 +576,25 @@
                     <h2>Through the lens !</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
+                      <% @eventId=2 %>
                       <% @a.each do |reg| %>
-                        <% if reg==2 %>
+                        <% if reg==@eventId %>
                           <% @is_true=1 %>
                         <% end %>
                       <% end %>
                       <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <form method="post" enctype="multipart/form-data" action="/regs">
                           <p>
                               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                           </p>
-                          <input hidden name="eid" value= "2">
-                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label> team name </label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
                           <p>
                               <input type="submit" value="Register for this">
                           </p>
@@ -594,7 +606,7 @@
                       <p><h6><%= link_to "Login to register", new_user_session_path %></h6><p>
                     <% end %>
 
-                    <p class="item-intro" style ="font-size:120%;">“Photography for me is not looking, it’s feeling. If you can’t feel what you’re looking at, then you’re never going to get others to feel anything when they look at your pictures.”
+                    <p class="item-intro" style ="font-size:120%">“Photography for me is not looking, it’s feeling. If you can’t feel what you’re looking at, then you’re never going to get others to feel anything when they look at your pictures.”
 ~Don McCullum
 </p>
                     <img class="img-responsive img-centered" src="/img/portfolio/02-preview.jpg" alt="">
@@ -646,18 +658,25 @@ Taking pictures is savouring life intensely, every hundredth of a second. Life g
                     <h2>Larynx Debate!</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
+                      <% @eventId=1 %>
                       <% @a.each do |reg| %>
-                        <% if reg==1 %>
+                        <% if reg==@eventId %>
                           <% @is_true=1 %>
                         <% end %>
                       <% end %>
                       <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <form method="post" enctype="multipart/form-data" action="/regs">
                           <p>
                               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                           </p>
-                          <input hidden name="eid" value= "1">
-                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label> team name </label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
                           <p>
                               <input type="submit" value="Register for this">
                           </p>
@@ -719,24 +738,31 @@ c. Relevance</br></br>
                     <h2>La la la capella</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
+                      <% @eventId=3 %>
                       <% @a.each do |reg| %>
-                        <% if reg==3 %>
+                        <% if reg==@eventId %>
                           <% @is_true=1 %>
                         <% end %>
                       <% end %>
                       <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <form method="post" enctype="multipart/form-data" action="/regs">
                           <p>
                               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                           </p>
-                          <input hidden name="eid" value= "3">
-                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label> team name </label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
                           <p>
                               <input type="submit" value="Register for this">
                           </p>
                       </form>
                       <% else %>
-                        <p> Already registered </p>
+                        <p><h6> Already registered </h6></p>
                       <% end %>
                     <% else %>
                       <p><h6><%= link_to "Login to register", new_user_session_path %></h6><p>
@@ -774,19 +800,26 @@ c. Relevance</br></br>
                     <!-- Project Details Go Here -->
                     <h2>La la la capella</h2>
                     <% if user_signed_in? %>
-                      <% is_true=0 %>
+                      <% @is_true=0 %>
+                      <% @eventId=3 %>
                       <% @a.each do |reg| %>
-                        <% if reg==3 %>
-                          <% is_true=1 %>
+                        <% if reg==@eventId %>
+                          <% @is_true=1 %>
                         <% end %>
                       <% end %>
-                      <% if is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs">
                           <p>
                               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                           </p>
-                          <input hidden name="eid" value= "3">
-                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label> team name </label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
                           <p>
                               <input type="submit" value="Register for this">
                           </p>
@@ -830,18 +863,25 @@ c. Relevance</br></br>
                     <h2>Rythm</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
+                      <% @eventId=4 %>
                       <% @a.each do |reg| %>
-                        <% if reg==4 %>
+                        <% if reg==@eventId %>
                           <% @is_true=1 %>
                         <% end %>
                       <% end %>
                       <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <form method="post" enctype="multipart/form-data" action="/regs">
                           <p>
                               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                           </p>
-                          <input hidden name="eid" value= "4">
-                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label> team name </label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
                           <p>
                               <input type="submit" value="Register for this">
                           </p>
@@ -882,18 +922,25 @@ c. Relevance</br></br>
                     <h2>Time to Run</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
+                      <% @eventId=5 %>
                       <% @a.each do |reg| %>
-                        <% if reg==5 %>
+                        <% if reg==@eventId %>
                           <% @is_true=1 %>
                         <% end %>
                       <% end %>
                       <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <form method="post" enctype="multipart/form-data" action="/regs">
                           <p>
                               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                           </p>
-                          <input hidden name="eid" value= "5">
-                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label> team name </label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
                           <p>
                               <input type="submit" value="Register for this">
                           </p>
@@ -934,18 +981,25 @@ c. Relevance</br></br>
                     <h2>Whip and nae nae!</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
+                      <% @eventId=6 %>
                       <% @a.each do |reg| %>
-                        <% if reg==6 %>
+                        <% if reg==@eventId %>
                           <% @is_true=1 %>
                         <% end %>
                       <% end %>
                       <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <form method="post" enctype="multipart/form-data" action="/regs">
                           <p>
                               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                           </p>
-                          <input hidden name="eid" value= "6">
-                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label> team name </label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
                           <p>
                               <input type="submit" value="Register for this">
                           </p>
@@ -986,18 +1040,25 @@ c. Relevance</br></br>
                     <h2>Shipwreck!</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
+                      <% @eventId=7 %>
                       <% @a.each do |reg| %>
-                        <% if reg==7 %>
+                        <% if reg==@eventId %>
                           <% @is_true=1 %>
                         <% end %>
                       <% end %>
                       <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <form method="post" enctype="multipart/form-data" action="/regs">
                           <p>
                               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                           </p>
-                          <input hidden name="eid" value= "7">
-                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label> team name </label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
                           <p>
                               <input type="submit" value="Register for this">
                           </p>
@@ -1043,18 +1104,25 @@ who is saved.</p>
                     <h2>League Of Fanatics!</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
+                      <% @eventId=8 %>
                       <% @a.each do |reg| %>
-                        <% if reg==8 %>
+                        <% if reg==@eventId %>
                           <% @is_true=1 %>
                         <% end %>
                       <% end %>
                       <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <form method="post" enctype="multipart/form-data" action="/regs">
                           <p>
                               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                           </p>
-                          <input hidden name="eid" value= "8">
-                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label> team name </label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
                           <p>
                               <input type="submit" value="Register for this">
                           </p>
@@ -1100,18 +1168,25 @@ who is saved.</p>-->
                     <h2>The Inquisitive Mind</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
+                      <% @eventId=9 %>
                       <% @a.each do |reg| %>
-                        <% if reg==9 %>
+                        <% if reg==@eventId %>
                           <% @is_true=1 %>
                         <% end %>
                       <% end %>
                       <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <form method="post" enctype="multipart/form-data" action="/regs">
                           <p>
                               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                           </p>
-                          <input hidden name="eid" value= "9">
-                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label> team name </label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
                           <p>
                               <input type="submit" value="Register for this">
                           </p>
@@ -1155,18 +1230,25 @@ who is saved.</p>-->
                     <h2>Trick or Treat!</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
+                      <% @eventId=10 %>
                       <% @a.each do |reg| %>
-                        <% if reg==10 %>
+                        <% if reg==@eventId %>
                           <% @is_true=1 %>
                         <% end %>
                       <% end %>
                       <% if @is_true==0 %>
-                        <form method="post" enctype="multipart/form-data" action="/regs/new">
+                        <form method="post" enctype="multipart/form-data" action="/regs">
                           <p>
                               <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                           </p>
-                          <input hidden name="eid" value= "10">
-                          <input hidden name="usid" value= "<%= @user.id %>">
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label> team name </label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
                           <p>
                               <input type="submit" value="Register for this">
                           </p>

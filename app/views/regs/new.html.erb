@@ -44,7 +44,7 @@
 
 <% else %>
 
-  <%= form_with(model: @reg, local: true) do |form| %>
+  <%= form_with(model: @reg, local: true, html:{onload:'submitform()'}, id:'regForm') do |form| %>
     <% if @reg.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@reg.errors.count, "error") %> prohibited this reg from being saved:</h2>
@@ -73,3 +73,9 @@
     <% end %>
 
 <% end %>
+
+<script>
+    function submitform() {
+        document.getElementById("regForm").submit();
+    }
+</script>
