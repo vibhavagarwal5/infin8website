@@ -89,7 +89,6 @@
                     <ul id="nav" class="nav navbar-nav">
                         <li class="current" role="navigation"><a href="#body">Home</a></li>
                         <li><a href="#works" role="navigation">Events</a></li>
-                        <li><a href="#team" role="navigation">Sponsors</a></li>
                         <li><a href="#contact" role="navigation">Locate Us</a></li>
                         <li><a href="#footer" role="navigation">Contact Us</a></li>
                       <!---  <li><a href="#footer">Contact Us</a></li>-->
@@ -103,9 +102,6 @@
 
             </div>
         </header>
-        <% if flash[:success] %>
-      <div class="success"><%= flash[:success] %></div>
-    <% end %>
         <!--
         End Fixed Navigation
         ==================================== -->
@@ -1344,6 +1340,11 @@ who is saved.</p>-->
 
 		<a href="javascript:void(0);" id="back-top"><i class="fa fa-chevron-circle-up fa-3x" style="color:#0d84b4"></i></a><!--2b6350-->
 
+        <script>
+        <% if flash[:success] %>
+        alert('<%= flash[:success] %>');
+        <% end %>
+        </script>
 		<!-- Essential jQuery Plugins
 		================================================== -->
 		<!-- Main jQuery -->
