@@ -389,6 +389,18 @@
     					</figcaption>
     				</figure>
                 </a>
+
+                <a href="#portfolioModal11" class="portfolio-link" data-toggle="modal">
+                    <figure class="mix work-item dance">
+                        <img src="/img/works/dance.jpg" alt="">
+                        <figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                            <p>
+                                <h4>Whip and Nae Nae</h4>
+                                <h4>Dance club</h4>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </a>
 			</div>
 
 		</section>
@@ -1105,6 +1117,64 @@ who is saved.</p>-->
                     <p align="left" style ="font-size:120%;">1. Each round will be held in group
 s.</br></br>2. Each player in a group will be given a character on a sinking ship; only one of them can be saved.</br></br>3. Depending on the characters, the participant has to justify why they should be the one
 who is saved.</p>-->
+                    <!--<ul class="list-inline">
+                      <li><strong>Client</strong>: John Doe</li>
+                      <li><strong>Category</strong>: Web Design</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>Whip and Nae Nae</h2>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @eventId=11 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==@eventId %>
+                          <% @is_true=1 %>
+                        <% end %>
+                      <% end %>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label>Team Name:</label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
+                            <input type="submit" value="Register for this">
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
+                    <% else %>
+                      <p><h6><%= link_to "Login to register", new_user_session_path %></h6><p>
+                    <% end %>
+
+                    <p class="item-intro">- brought to you by Music club of iiitb.</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
+                    <p style =" font-size:140%;">Legs tapping on the floor to the Punjabi music in the air and yet not confident enough to turn up on the dance floor? Have no fear as a Dance Workshop (Bollywood Style),   by Mr Abhishek Anand, a world-class choreographer, is all set for you in this Infin8 - 2018. Do check out his profile below, because if that's not going to force you to come to the workshop then we don't know what will.</p>
                     <!--<ul class="list-inline">
                       <li><strong>Client</strong>: John Doe</li>
                       <li><strong>Category</strong>: Web Design</li>
