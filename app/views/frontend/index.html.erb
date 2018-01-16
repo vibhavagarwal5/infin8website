@@ -401,6 +401,18 @@
                         </figcaption>
                     </figure>
                 </a>
+
+                <a href="#portfolioModal12" class="portfolio-link" data-toggle="modal">
+                    <figure class="mix work-item cite">
+                        <img src="/img/works/treasure.png" alt="">
+                        <figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                            <p>
+                                <h4>Treasure hunt</h4>
+                                <h4>Cite.</h4>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </a>
 			</div>
 
 		</section>
@@ -1201,7 +1213,76 @@ who is saved.</p>-->
             </div>
           </div>
         </div>
+        <!-- Portfolio Modal 11 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>Trick or Treat!</h2>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @eventId=12 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==@eventId %>
+                          <% @is_true=1 %>
+                        <% end %>
+                      <% end %>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label>Team Name:</label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
+                            <input type="submit" value="Register for this">
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
+                    <% else %>
+                      <p><h6><%= link_to "Login to register", new_user_session_path %></h6><p>
+                    <% end %>
 
+                    <p class="item-intro">- Brought to you by Cite.</p>
+                    <img class="img-responsive img-centered" src="/img/portfolio/08-preview.jpg" alt="">
+                    <p style =" font-size:140%;">Get Ready to be a part of the Largest Treasure Hunt event in IIIT Bangalore. Charge your brains, loosen up and try to solve the mysteries we have for you. Clock will be ticking.
+                    </p></br></p></br><strong><u>RULES</u></strong></br></p>
+                    <p align="left" style ="font-size:120%;">1.  At least 3 and at most 4 participants per team.</br></br>
+                    2. Participation will be decided on a first come first serve basis. The first 50 teams to register will get to participate.</br></br>
+                    3. None of the clues will be hidden inside any of the hostels, washrooms, server rooms, powerhouse or the incubation center.</br></br>
+                    4. You are free to use any gadgets and resources to reach your destination.</br></br>
+                    5. Any mishap or destruction of the college property will be the responsibility of the team. You will be immediately disqualified and be penalised by the college authority.</br></br>
+                    6. The decision of the winner will be taken by the jury. </br></br>
+                    7. It's gonna be a long night so, we hope you had a heavy dinner.</br></br>
+                    </p><!--</br></br><strong><u>RULES</u></strong></br></p>
+                    <p align="left" style ="font-size:120%;">1. Each round will be held in group
+s.</br></br>2. Each player in a group will be given a character on a sinking ship; only one of them can be saved.</br></br>3. Depending on the characters, the participant has to justify why they should be the one
+who is saved.</p>-->
+                    <!--<ul class="list-inline">
+                      <li><strong>Client</strong>: John Doe</li>
+                      <li><strong>Category</strong>: Web Design</li>
+                    </ul>-->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
 		<!--
         Contact Us
