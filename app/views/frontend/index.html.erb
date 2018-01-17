@@ -274,6 +274,7 @@
 						<!--	<li><a href="javascript:;" data-filter=".drama" class="filter">Dramatics</a></li>-->
 							<li><a href="javascript:;" data-filter=".lsd" class="filter">LSD</a></li>
 							<li><a href="javascript:;" data-filter=".dj" class="filter">DJ Night</a></li>
+                            <li><a href="javascript:;" data-filter=".lan_gaming" class="filter">LAN Gaming</a></li>
 
 						</ul>
 					</div>
@@ -409,6 +410,28 @@
                             <p>
                                 <h4>Treasure hunt</h4>
                                 <h4>Cite.</h4>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#portfolioModal13" class="portfolio-link" data-toggle="modal">
+                    <figure class="mix work-item lan_gaming">
+                        <img src="/img/works/fifa.jpg" alt="">
+                        <figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                            <p>
+                                <h4>FIFA</h4>
+                                <h4>LAN Gaming</h4>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#portfolioModal14" class="portfolio-link" data-toggle="modal">
+                    <figure class="mix work-item lan_gaming">
+                        <img src="/img/works/CSGO.jpg" alt="">
+                        <figcaption class="overlay" style="padding-top:30%;padding-bottom30%">
+                            <p>
+                                <h4>CSGO</h4>
+                                <h4>LAN Gaming</h4>
                             </p>
                         </figcaption>
                     </figure>
@@ -1226,7 +1249,7 @@ who is saved.</p>-->
                 <div class="col-lg-8 col-lg-offset-2">
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
-                    <h2>Trick or Treat!</h2>
+                    <h2>Treasure Hunt!</h2>
                     <% if user_signed_in? %>
                       <% @is_true=0 %>
                       <% @eventId=12 %>
@@ -1284,6 +1307,208 @@ who is saved.</p>-->
           </div>
         </div>
 
+        <!-- Portfolio Modal 11 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>FIFA!</h2>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @eventId=13 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==@eventId %>
+                          <% @is_true=1 %>
+                        <% end %>
+                      <% end %>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                            <p>
+                                1v1 Registration:
+                            </p>
+                              <label>Team Name:</label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                            <p>
+                                1v1 Registration:
+                            </p>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
+                            <input type="submit" value="Register for this">
+                      </form>
+                      <% else %>
+                      <p>
+                          1v1 Registration:
+                      </p>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
+                    <% else %>
+                      <p><h6><%= link_to "Login to register", new_user_session_path %></h6><p>
+                    <% end %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @eventId=14 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==@eventId %>
+                          <% @is_true=1 %>
+                        <% end %>
+                      <% end %>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label>Team Name:</label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
+                            <input type="submit" value="Register for this">
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
+                    <% else %>
+                      <p><h6><%= link_to "Login to register", new_user_session_path %></h6><p>
+                    <% end %>
+
+                    <p align="left" style ="font-size:120%;">
+                        Football fan but too lazy to play outside! Chillout, we got FIFA for you!<br><br>
+                        <strong>RULES </strong>(for both 1v1 and 2v2): <br><br>
+                        •	Standard rules apply.<br>
+                        •	5 mins half (till semis)<br>
+                        •	Finals time(depends on the finalists).<br>
+                        •	World 11 and adidas 11 not allowed.<br>
+                        •	Difficulty-world class, match speed-normal.<br>
+                        •	Camera angle- decided by the organizer.<br>
+                        •	Keyboards are not allowed, only gamepads will be used in the event.<br>
+                        •	Decision by the organizer is final.<br><br>
+                        <strong>NOTE: </strong>Standard gaming gear will be provided, but you are most welcome to get your own(RGB lit stuff).
+                    </p>
+
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Modal 9 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal14" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"> </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2>CSGO</h2>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @eventId=15 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==@eventId %>
+                          <% @is_true=1 %>
+                        <% end %>
+                      <% end %>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label>Team Name:</label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
+                            <input type="submit" value="Register for this">
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
+                    <% else %>
+                      <p><h6><%= link_to "Login to register", new_user_session_path %></h6><p>
+                    <% end %>
+                    <% if user_signed_in? %>
+                      <% @is_true=0 %>
+                      <% @eventId=16 %>
+                      <% @a.each do |reg| %>
+                        <% if reg==@eventId %>
+                          <% @is_true=1 %>
+                        <% end %>
+                      <% end %>
+                      <% if @is_true==0 %>
+                        <form method="post" enctype="multipart/form-data" action="/regs">
+                          <p>
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                          </p>
+                          <input hidden id="reg_event_id" name="reg[event_id]" value='<%= @eventId %>'>
+                          <input hidden id="reg_user_id" name="reg[user_id]" value="<%= @user.id %>">
+                            <%if Event.find(@eventId).is_team %>
+                              <label>Team Name:</label>
+                              <input id="reg_team_name" name="reg[team_name]">
+                            <%else%>
+                                <input id="reg_team_name" name="reg[team_name]" hidden value=null>
+                            <%end%>
+                            <input type="submit" value="Register for this">
+                      </form>
+                      <% else %>
+                        <p><h6> Already registered </h6></p>
+                      <% end %>
+                    <% else %>
+                      <p><h6><%= link_to "Login to register", new_user_session_path %></h6><p>
+                    <% end %>
+
+                    <p align="left" style ="font-size:120%;">
+                        Got that killer instict but don't want no jail time!<br><br>
+                        <strong>RULES </strong>: <br><br>
+                        •	Standard competitive match making rules apply.<br>
+                        •	No weapons are prohibited.<br>
+                        •	Veto to decide the maps.<br>
+                        •	Best of one till quarters, best of 3 for semis, best of 5 for finals.  <br><br>
+
+                        <strong>2v2</strong><br>
+                        •	Terrorists have to call the bombsite in the freeze time. The bomb can only be planted at that bomb site only.<br>
+                        •	No restriction in the movement in the map.<br><br>
+
+                        <strong>5v5</strong><br>
+                        •	Standard competitive match making rules apply.<br>
+                        •	Maps decides through veto.<br><br>
+
+                        <strong>NOTE: </strong>Standard gaming gear will be provided, but you are most welcome to get your own(RGB lit stuff).Also get earphones for counterstrike.
+                    </p>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 		<!--
         Contact Us
         ==================================== -->
